@@ -3,8 +3,62 @@
    Features: Theme Switcher, Heavy CV Renderer, Scroll Reveal, Canvas Physics
    ========================================================================== */
 
-// 1. Projects Data (+30 Total Workflows Highlight Matrix)
+// 1. Projects & System Architecture Data Matrix (+30 Total Workflows & 10+ Custom Nodes)
 const projectsData = [
+  {
+    id: "arch-1",
+    category: "arch",
+    title: "Flowise Multi-Agent Network Architecture",
+    subtitle: "Hierarchical Supervisor Agents & Sequential Tool Networks",
+    icon: "fa-solid fa-sitemap",
+    summary: "System design pattern for multi-agent coordination inside Flowise. Combines supervisor routing agents, tool execution sandboxes, and state memory persistence.",
+    tech: ["Multi-Agent Architecture", "Flowise AI", "Supervisor Agent", "State Memory", "Tool Sandboxing"],
+    details: {
+      overview: "Designed an enterprise multi-agent topology where a primary Supervisor Agent evaluates incoming user intent and dispatches tasks to specialized sub-agents (Database Query Agent, CRM Logger, Messaging Dispatcher).",
+      architecture: [
+        "Supervisor Agent node with custom tool-routing instructions.",
+        "Sequential model execution chains for complex multi-step tasks.",
+        "State memory store preserving conversation context across agent handoffs."
+      ],
+      impact: "Enables autonomous execution of multi-departmental business tasks without context loss."
+    }
+  },
+  {
+    id: "arch-2",
+    category: "arch",
+    title: "Pinecone Enterprise RAG Architecture",
+    subtitle: "Document Parsing, Hybrid Vector Search & Context Verification",
+    icon: "fa-solid fa-layer-group",
+    summary: "High-precision Retrieval-Augmented Generation system design utilizing Pinecone Vector Database, OpenAI Embeddings, and context verification safeguards.",
+    tech: ["Pinecone Vector DB", "OpenAI Embeddings", "Document Chunking", "Hybrid Vector Search", "Context Audit"],
+    details: {
+      overview: "Robust RAG pipeline architecture designed to ingest complex technical manuals, product catalogs, and policy documents into Pinecone for rapid semantic lookup.",
+      architecture: [
+        "Recursive character text splitting and metadata tagging.",
+        "Pinecone vector index integration with top-k similarity retrieval.",
+        "Context verification prompt chain preventing hallucinated responses."
+      ],
+      impact: "Delivers enterprise-grade, verifiable answers from confidential knowledge bases in milliseconds."
+    }
+  },
+  {
+    id: "arch-3",
+    category: "arch",
+    title: "MCP Server & Backend Script Dispatcher Topology",
+    subtitle: "Model Context Protocol Bridge with Claude 3.5 Sonnet",
+    icon: "fa-solid fa-network-wired",
+    summary: "Architecture pattern connecting conversational LLMs to internal backend Node.js scripts via Model Context Protocol (MCP) with full execution auditing.",
+    tech: ["MCP Architecture", "Anthropic Claude", "Node.js Sandbox", "PostgreSQL Audit", "Flowise"],
+    details: {
+      overview: "Bridges conversational AI assistants with local backend server operations using Model Context Protocol (MCP) standards.",
+      architecture: [
+        "MCP Client node embedded directly in Flowise canvas.",
+        "Secure Node.js script execution environment for backend task triggers.",
+        "PostgreSQL checkpoint logger tracking every command dispatch."
+      ],
+      impact: "Unlocks safe backend task automation for non-technical team members using simple chat prompts."
+    }
+  },
   {
     id: "nodes-mcp-1",
     category: "nodes-mcp",
@@ -244,6 +298,7 @@ function renderProjects(filter = 'all') {
 
 function getCategoryName(cat) {
   switch(cat) {
+    case 'arch': return 'Architecture & System Design';
     case 'nodes-mcp': return 'Custom Nodes & MCP';
     case 'ai-agents': return 'AI Agent & Pinecone';
     case 'n8n': return 'n8n Automation';
@@ -345,7 +400,7 @@ function openResumeModal() {
         AI Agent Architect & Workflow Automation Specialist | Flowise & n8n Engineer
       </p>
       <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px;">
-        📍 Benha / Cairo, Egypt | ✉️ mahmoudzanaty454@gmail.com | 💼 Available for Part-Time & Contract Roles
+        📍 Benha / Cairo, Egypt | ✉️ mahmoudzanaty454@gmail.com
       </p>
     </div>
 
@@ -406,11 +461,12 @@ function openResumeModal() {
 
     <h2>Detailed Project Architecture Highlights</h2>
     <ol style="padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
-      <li style="margin-bottom: 6px;"><strong>Self-Developed Custom Flowise Nodes (10+ Nodes):</strong> Native TypeScript/Node.js integration for WhatsApp, Telegram, Gmail, Weather, MCP, PostgreSQL Logger, Pinecone, Schedulers, and Webhooks.</li>
-      <li style="margin-bottom: 6px;"><strong>MCP Agent with Claude:</strong> Model Context Protocol node triggering local backend Node.js script execution via natural language.</li>
+      <li style="margin-bottom: 6px;"><strong>Flowise Multi-Agent Architecture:</strong> Hierarchical supervisor & sequential sub-agent routing network.</li>
+      <li style="margin-bottom: 6px;"><strong>Pinecone Enterprise RAG System Design:</strong> Ingestion, hybrid vector search, and context audit verification.</li>
+      <li style="margin-bottom: 6px;"><strong>MCP Server Dispatcher Topology:</strong> Natural language command interface to local Node.js backend execution.</li>
+      <li style="margin-bottom: 6px;"><strong>Self-Developed Custom Flowise Nodes (10+ Nodes):</strong> Native Node.js integration for WhatsApp, Telegram, Gmail, Weather, MCP, PostgreSQL Logger, Pinecone, Schedulers, and Webhooks.</li>
       <li style="margin-bottom: 6px;"><strong>Site Engineer Assistant:</strong> Secure LLM-to-SQL query generation over PostgreSQL construction databases.</li>
       <li style="margin-bottom: 6px;"><strong>Field Sales Dashboard Agent:</strong> Van-level performance & target KPI query engine with natural language output visualization.</li>
-      <li style="margin-bottom: 6px;"><strong>Pinecone Enterprise RAG Agent:</strong> High-precision document indexing and semantic vector search powered by Pinecone & OpenAI.</li>
       <li style="margin-bottom: 6px;"><strong>Retail Support & Installment Eligibility AI:</strong> Integrated PostgreSQL, Pinecone, HubSpot CRM, and Gmail follow-up engine.</li>
       <li style="margin-bottom: 6px;"><strong>Real Estate Sales Assistant:</strong> Multi-modal listing search, dynamic recommendations, and instant HubSpot CRM synchronization.</li>
       <li style="margin-bottom: 6px;"><strong>Chat-Triggered Trello Task Creator:</strong> Conversational AI node interpreting team messages into Trello cards.</li>
