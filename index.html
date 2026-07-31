@@ -38,6 +38,10 @@
         <li><a href="#experience">Experience</a></li>
       </ul>
       <div class="nav-actions">
+        <!-- Social Link Header Icons -->
+        <a href="https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/" target="_blank" rel="noopener" class="header-social-link" title="LinkedIn Profile">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
         <!-- Light / Dark Theme Toggle Button -->
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme" onclick="toggleTheme()">
           <i class="fa-solid fa-moon" id="theme-icon"></i>
@@ -348,31 +352,41 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact Section (Redesigned & Spacious) -->
   <section id="contact" class="section glass-section">
     <div class="section-container">
       <div class="contact-card reveal">
         <span class="section-subtitle">GET IN TOUCH</span>
         <h2 class="section-title">Let's Build Autonomous Workflows Together</h2>
-        <p>Available for AI & Automation engineering projects.</p>
+        <p>Direct communication channels for engineering projects and contract roles.</p>
 
         <div class="contact-methods">
           <div class="contact-box" onclick="copyEmail()">
             <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
             <div class="contact-info">
               <span class="contact-label">Direct Email</span>
-              <strong class="contact-value">mahmoudzanaty454@gmail.com</strong>
+              <strong class="contact-value" title="mahmoudzanaty454@gmail.com">mahmoudzanaty454@gmail.com</strong>
             </div>
-            <span class="copy-hint"><i class="fa-solid fa-copy"></i> Copy</span>
+            <div class="action-pill"><i class="fa-solid fa-copy"></i> Copy</div>
           </div>
 
-          <div class="contact-box">
-            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <a href="tel:+201024190741" class="contact-box contact-box-link">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
             <div class="contact-info">
-              <span class="contact-label">Location</span>
-              <strong class="contact-value">Benha / Cairo, Egypt (Remote Friendly)</strong>
+              <span class="contact-label">Phone / WhatsApp</span>
+              <strong class="contact-value">+20 102 419 0741</strong>
             </div>
-          </div>
+            <div class="action-pill"><i class="fa-solid fa-phone"></i> Call</div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/" target="_blank" rel="noopener" class="contact-box contact-box-link">
+            <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="contact-info">
+              <span class="contact-label">LinkedIn Profile</span>
+              <strong class="contact-value">Mahmoud Abd El-Ghaffar</strong>
+            </div>
+            <div class="action-pill"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit</div>
+          </a>
         </div>
       </div>
     </div>
@@ -381,7 +395,12 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-      <p>© 2026 Mahmoud Abd El-Ghaffar. Built with modern HTML/CSS/JS — Ready for deployment on Render.</p>
+      <p>© 2026 Mahmoud Abd El-Ghaffar. AI Agent Architect & Workflow Automation Specialist. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="tel:+201024190741" aria-label="Phone Call"><i class="fa-solid fa-phone"></i></a>
+        <a href="mailto:mahmoudzanaty454@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
     </div>
   </footer>
 

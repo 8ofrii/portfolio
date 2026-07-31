@@ -400,7 +400,7 @@ function openResumeModal() {
         AI Agent Architect & Workflow Automation Specialist | Flowise & n8n Engineer
       </p>
       <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px;">
-        📍 Benha / Cairo, Egypt | ✉️ mahmoudzanaty454@gmail.com
+        📍 Benha / Cairo, Egypt | 📞 <a href="tel:+201024190741" style="color: var(--primary-cyan); text-decoration: none;">+20 1024190741</a> | ✉️ mahmoudzanaty454@gmail.com | 🔗 <a href="https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/" target="_blank" rel="noopener" style="color: var(--primary-cyan); text-decoration: none;">LinkedIn Profile</a>
       </p>
     </div>
 
