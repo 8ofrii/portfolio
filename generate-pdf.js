@@ -16,10 +16,10 @@ function generateResumePDF(outputPath) {
   const darkColor = '#0f172a';
   const textColor = '#334155';
 
-  // Header (GitHub URL removed)
+  // Header
   doc.fillColor(darkColor).fontSize(21).font('Helvetica-Bold').text('Mahmoud Abd El-Ghaffar (Mahmoud Zanaty)', { align: 'left' });
   doc.moveDown(0.2);
-  doc.fillColor(primaryColor).fontSize(11.5).font('Helvetica-Bold').text('AI Agent Architect & Workflow Automation Specialist | Flowise, LangChain & n8n Engineer');
+  doc.fillColor(primaryColor).fontSize(11.5).font('Helvetica-Bold').text('AI Agent Architect & Workflow Automation Specialist | MicroMind Platform, LangChain & n8n Engineer');
   doc.moveDown(0.3);
   doc.fillColor(textColor).fontSize(9).font('Helvetica').text('Location: Benha / Cairo, Egypt  |  Phone: +20 102 419 0741  |  Email: mahmoudzanaty454@gmail.com');
   doc.fillColor(primaryColor).fontSize(9).font('Helvetica-Bold').text('LinkedIn: https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/');
@@ -52,7 +52,7 @@ function generateResumePDF(outputPath) {
   // Core Technical Competencies
   addSectionHeader('Core Technical Competencies');
   const skills = [
-    '• Workflow & Agent Frameworks: Flowise AI (30+ Native Core Nodes), n8n, LangChain (Expert), LangGraph (Advanced), MCP, Webhooks',
+    '• Workflow & Agent Frameworks: MicroMind Platform (30+ Native Core Nodes), n8n, LangChain (Expert), LangGraph (Advanced), MCP, Webhooks',
     '• AI Coding Acceleration: Google Antigravity, Claude Code, OpenAI Codex, VS Code AI Suite, GPT-4o, Gemini 2.0 Flash',
     '• ERP & Enterprise Data Systems: Natural Language BI Queries over Oracle, Microsoft Dynamics, SAP, Odoo, Oracle Fusion, Dynamics 365 OData, SQL',
     '• Databases & Vector Search: Pinecone Vector Database, PostgreSQL (LLM-to-SQL & Audit Logger), PGVector, OpenAI Embeddings',
@@ -72,7 +72,7 @@ function generateResumePDF(outputPath) {
   doc.fillColor(primaryColor).fontSize(9).font('Helvetica-Bold').text('   (2024 – 2026)', { align: 'right' });
   doc.moveDown(0.3);
   const expMicroMind = [
-    'Built and co-built 30+ native integration nodes directly in AI MicroMind Core (Flowise node architecture) for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI tools (Antigravity, Claude Code, Codex).',
+    'Built and co-built 30+ native integration nodes directly in AI MicroMind Core for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI tools (Antigravity, Claude Code, Codex).',
     'Architected and deployed the AI MicroMind App featuring the Rebort Bot Framework and Advanced BI & Reporting Tools. Enabled enterprise users to ask natural language questions directly to AI agents to extract live operational insights from on-premise ERPs (Oracle, Microsoft Dynamics, SAP, Odoo, SQL) and cloud platforms (Oracle Fusion, Dynamics 365 OData).',
     'Engineered full-stack mobile applications (front-end & back-end) and built AI MicroMind MicroApps, creating modular bridges to integrate third-party applications seamlessly into the MicroMind ecosystem.',
     'Developed custom integration applications and automated workflows across Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, Facebook Messenger, and WAPA.',

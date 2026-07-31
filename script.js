@@ -35,7 +35,7 @@ const projectsData = [
     desc: "Built and co-built 30+ native custom integration nodes directly inside AI MicroMind Core, enabling native platform-level connections to WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP, Pinecone, Webhooks, and Schedulers.",
     techStack: ["AI MicroMind Core", "30+ Native Nodes", "Node.js", "WAPA API", "Telegram", "Pinecone", "MCP"],
     details: {
-      overview: "Deep native extension of Flowise & Node.js architecture providing 30+ production-grade nodes built directly into the platform core.",
+      overview: "Deep native extension of AI MicroMind Core architecture providing 30+ production-grade nodes built directly into the platform core.",
       architecture: [
         "Native WAPA (WhatsApp Business API) messaging and automated dialog state handlers.",
         "Model Context Protocol (MCP) Client Node executing backend scripts safely via Claude prompts.",
@@ -114,7 +114,7 @@ const projectsData = [
     details: {
       overview: "Production hosting pipeline ensuring high availability, automatic deployments, and secure server management for AI microservices.",
       architecture: [
-        "Dockerized microservice containers for Flowise, n8n, and custom Node.js/Python API handlers.",
+        "Dockerized microservice containers for MicroMind Platform, n8n, and custom Node.js/Python API handlers.",
         "DigitalOcean VPS & AWS instance optimization for zero downtime agent execution.",
         "GitHub Actions CI/CD pipelines deploying live static and backend code to Render and VPS servers."
       ],
@@ -216,7 +216,7 @@ function openResumeModal() {
     <div class="resume-rendered">
       <h1>Mahmoud Abd El-Ghaffar (Mahmoud Zanaty)</h1>
       <p style="color: var(--primary-cyan); font-weight: 700; margin-bottom: 12px;">
-        AI Agent Architect & Workflow Automation Specialist | Flowise, LangChain & n8n Engineer
+        AI Agent Architect & Workflow Automation Specialist | MicroMind Platform, LangChain & n8n Engineer
       </p>
       <p style="font-size: 0.9rem; color: var(--text-muted);">
         📍 Benha / Cairo, Egypt | 📞 <a href="tel:+201024190741" style="color: var(--primary-cyan);">+20 102 419 0741</a> | ✉️ mahmoudzanaty454@gmail.com | 🔗 <a href="https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/" target="_blank" style="color: var(--primary-cyan);">LinkedIn Profile</a>
