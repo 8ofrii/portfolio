@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mahmoud Zanaty | AI & Workflow Automation Builder</title>
-  <meta name="description" content="Portfolio of Mahmoud Zanaty - Computer Engineer, AI Agent Architect, Flowise & n8n Specialist. Building custom nodes, MCP integrations, Pinecone RAG agents, and enterprise workflows using Antigravity & Claude Code.">
+  <meta name="description" content="Portfolio of Mahmoud Zanaty - Computer Engineer, AI Agent Architect, Flowise & n8n Specialist. Building custom nodes, MCP integrations, Pinecone RAG agents, and 30+ enterprise workflows using Antigravity & Claude Code.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -33,12 +33,16 @@
       </a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#workflows">Workflows & Agents</a></li>
+        <li><a href="#workflows">Workflows (+30)</a></li>
         <li><a href="#custom-nodes">AI-Powered Dev</a></li>
         <li><a href="#skills">Tech Stack</a></li>
         <li><a href="#experience">Experience</a></li>
       </ul>
       <div class="nav-actions">
+        <!-- Light / Dark Theme Toggle Button -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme" onclick="toggleTheme()">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
         <button class="btn btn-outline" onclick="openResumeModal()">
           <i class="fa-solid fa-file-contract"></i> View CV
         </button>
@@ -55,20 +59,20 @@
   <!-- Hero Section -->
   <section id="about" class="hero-section">
     <div class="hero-container">
-      <div class="hero-badge">
+      <div class="hero-badge float-anim">
         <span class="pulse-dot"></span>
         <span>Open for Part-Time & Contract Roles</span>
       </div>
-      <h1 class="hero-title">
+      <h1 class="hero-title reveal">
         AI Agent Architect & <br>
         <span class="gradient-text">Workflow Automation Builder</span>
       </h1>
-      <p class="hero-subtitle">
+      <p class="hero-subtitle reveal">
         Computer Engineer specializing in <strong>Flowise AI</strong>, <strong>n8n</strong>, <strong>Pinecone Vector RAG</strong>, 
-        and <strong>Model Context Protocol (MCP)</strong>. Harnessing modern AI tools (<strong>Antigravity, Claude Code, Codex</strong>) to engineer custom nodes, webhooks, and enterprise automations.
+        and <strong>Model Context Protocol (MCP)</strong>. Harnessing modern AI tools (<strong>Antigravity, Claude Code, Codex</strong>) to engineer 30+ production workflows, custom nodes, webhooks, and enterprise automations.
       </p>
       
-      <div class="hero-tags">
+      <div class="hero-tags reveal">
         <span class="tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Antigravity & Claude Code</span>
         <span class="tag"><i class="fa-solid fa-diagram-project"></i> Flowise AI</span>
         <span class="tag"><i class="fa-solid fa-bolt"></i> n8n Workflows</span>
@@ -77,9 +81,9 @@
         <span class="tag"><i class="fa-solid fa-robot"></i> MCP Agent Integration</span>
       </div>
 
-      <div class="hero-cta-group">
+      <div class="hero-cta-group reveal">
         <a href="#workflows" class="btn btn-primary btn-lg">
-          <i class="fa-solid fa-rocket"></i> Explore 10+ AI Workflows
+          <i class="fa-solid fa-rocket"></i> Explore Workflows (+30)
         </a>
         <button class="btn btn-glass btn-lg" onclick="openResumeModal()">
           <i class="fa-solid fa-file-pdf"></i> View & Print Resume
@@ -90,10 +94,10 @@
       </div>
 
       <!-- Live Metrics Highlights -->
-      <div class="metrics-grid">
+      <div class="metrics-grid reveal">
         <div class="metric-card">
-          <div class="metric-num">10+</div>
-          <div class="metric-label">Production AI Workflows</div>
+          <div class="metric-num">+30</div>
+          <div class="metric-label">Production AI Workflows Built</div>
         </div>
         <div class="metric-card">
           <div class="metric-num">4 Native</div>
@@ -114,15 +118,24 @@
   <!-- Workflows Showcase Section -->
   <section id="workflows" class="section">
     <div class="section-container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-subtitle">PORTFOLIO SHOWCASE</span>
         <h2 class="section-title">Featured AI Agents & Workflows</h2>
         <p class="section-desc">Interactive breakdown of production AI systems, custom Flowise nodes, and n8n automated pipelines.</p>
       </div>
 
+      <!-- Widget Callout for +30 Workflows -->
+      <div class="workflow-count-widget reveal">
+        <div class="widget-badge">+30</div>
+        <div class="widget-text">
+          <strong>Over 30+ Enterprise AI Workflows & Automations Built</strong>
+          <p>Displaying 11 key featured architecture showcases below from a portfolio of 30+ custom AI agents, Flowise nodes, webhooks, schedulers, and n8n pipelines.</p>
+        </div>
+      </div>
+
       <!-- Category Filter Tabs -->
-      <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterProjects('all')">All Projects (11)</button>
+      <div class="filter-tabs reveal">
+        <button class="tab-btn active" onclick="filterProjects('all')">All Featured (11)</button>
         <button class="tab-btn" onclick="filterProjects('nodes-mcp')">Custom Nodes & MCP</button>
         <button class="tab-btn" onclick="filterProjects('ai-agents')">AI Agents & Pinecone RAG</button>
         <button class="tab-btn" onclick="filterProjects('n8n')">n8n Automations</button>
@@ -140,8 +153,8 @@
   <section id="custom-nodes" class="section glass-section">
     <div class="section-container">
       <div class="two-col-grid">
-        <div class="col-text">
-          <span class="badge-pill"><i class="fa-solid fa-bolt-lightning"></i> AI-Powered Workflow Engineering</span>
+        <div class="col-text reveal">
+          <span class="badge-pill float-anim"><i class="fa-solid fa-bolt-lightning"></i> AI-Powered Workflow Engineering</span>
           <h2 class="gradient-text">Extending Platforms with Antigravity & Claude Code</h2>
           <p>
             Rather than relying on static low-code limits, I utilize cutting-edge AI development tools (<strong>Antigravity, Claude Code, Codex, VS Code</strong>) to rapidly build custom nodes, inject custom JS logic, configure webhooks, and set up cron schedulers inside Flowise and n8n.
@@ -170,7 +183,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-visual">
+        <div class="col-visual reveal">
           <div class="terminal-card">
             <div class="terminal-header">
               <span class="dot red"></span>
@@ -188,7 +201,7 @@
   - <span class="code-type">Pinecone Vector RAG</span>: Enterprise Knowledge Store
   - <span class="code-type">PostgreSQL Logger</span>: Node Inputs, Outputs & Tools Audit
 
-<span class="code-comment"># Status: 100% Operational & Verified in Production</span></code></pre>
+<span class="code-comment"># Status: 30+ Workflows Operational & Verified</span></code></pre>
           </div>
         </div>
       </div>
@@ -198,14 +211,14 @@
   <!-- Technical Skills Matrix -->
   <section id="skills" class="section">
     <div class="section-container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-subtitle">TECHNICAL EXPERTISE</span>
         <h2 class="section-title">Skills & Tooling Matrix</h2>
         <p class="section-desc">A comprehensive stack spanning low-code platforms, AI-assisted development tools, vector databases, and enterprise APIs.</p>
       </div>
 
       <div class="skills-grid">
-        <div class="skill-category">
+        <div class="skill-category reveal">
           <div class="cat-header">
             <i class="fa-solid fa-sitemap cat-icon"></i>
             <h3>Workflow & AI Platforms</h3>
@@ -219,7 +232,7 @@
           </div>
         </div>
 
-        <div class="skill-category">
+        <div class="skill-category reveal">
           <div class="cat-header">
             <i class="fa-solid fa-wand-magic-sparkles cat-icon"></i>
             <h3>AI Coding & Acceleration Tools</h3>
@@ -233,7 +246,7 @@
           </div>
         </div>
 
-        <div class="skill-category">
+        <div class="skill-category reveal">
           <div class="cat-header">
             <i class="fa-solid fa-database cat-icon"></i>
             <h3>Databases, Pinecone & SQL</h3>
@@ -247,7 +260,7 @@
           </div>
         </div>
 
-        <div class="skill-category">
+        <div class="skill-category reveal">
           <div class="cat-header">
             <i class="fa-solid fa-cloud cat-icon"></i>
             <h3>Integrations & Observability</h3>
@@ -267,20 +280,20 @@
   <!-- Work Experience Timeline -->
   <section id="experience" class="section glass-section">
     <div class="section-container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-subtitle">CAREER TRACK</span>
         <h2 class="section-title">Work Experience</h2>
       </div>
 
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-date">Sep 2023 – Apr 2025</div>
             <h3 class="timeline-role">AI & Automation Engineer</h3>
             <h4 class="timeline-company">AI MicroMind</h4>
             <p class="timeline-desc">
-              Leveraged AI coding environments (Antigravity, Claude Code, Codex) to build production AI workflows, native Flowise messaging nodes, MCP servers, Pinecone RAG databases, and PostgreSQL SQL agents.
+              Leveraged AI coding environments (Antigravity, Claude Code, Codex) to build 30+ production AI workflows, native Flowise messaging nodes, MCP servers, Pinecone RAG databases, and PostgreSQL SQL agents.
             </p>
             <div class="timeline-tags">
               <span>Antigravity</span> <span>Claude Code</span> <span>Flowise</span> <span>n8n</span> <span>MCP</span> <span>Pinecone</span> <span>PostgreSQL</span>
@@ -288,7 +301,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-date">Jun 2021 – Jan 2022</div>
@@ -303,7 +316,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-date">Oct 2020 – Jun 2021</div>
@@ -315,7 +328,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-date">Jan 2020 – Sep 2020</div>
@@ -327,7 +340,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-date">Education</div>
@@ -340,31 +353,10 @@
     </div>
   </section>
 
-  <!-- Target Job Match Banner -->
-  <section class="section">
-    <div class="section-container">
-      <div class="job-match-card">
-        <div class="match-badge"><i class="fa-solid fa-bullseye"></i> PERFECT MATCH FOR MG.DIGITAL</div>
-        <h2>Applying for: <span>AI & Workflow Automation Builder</span></h2>
-        <p>
-          My hands-on experience using AI coding assistants (Antigravity, Claude Code, Codex) to extend Flowise with custom nodes, create MCP integrations, build Pinecone RAG systems, and configure n8n automation trees directly fulfills the requirements of your AI & Workflow Automation Builder role.
-        </p>
-        <div class="match-actions">
-          <button class="btn btn-primary" onclick="openResumeModal()">
-            <i class="fa-solid fa-file-lines"></i> Open Tailored CV
-          </button>
-          <a href="https://mg.digital/careers/ai-workflow-automation-builder/" target="_blank" rel="noopener" class="btn btn-outline">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Target Job Posting
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Contact Section -->
   <section id="contact" class="section glass-section">
     <div class="section-container">
-      <div class="contact-card">
+      <div class="contact-card reveal">
         <span class="section-subtitle">GET IN TOUCH</span>
         <h2 class="section-title">Let's Build Autonomous Workflows Together</h2>
         <p>Available for Part-Time, Contract, or Full-Time AI & Automation engineering projects.</p>

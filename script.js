@@ -1,9 +1,9 @@
 /* ==========================================================================
    Mahmoud Zanaty Portfolio - Interactive JavaScript Engine
-   Features: Project Filtering, Modal Viewers, Animated Canvas, Clipboard Toast
+   Features: Theme Switcher, Scroll Reveal Animations, Interactive Canvas, Modals
    ========================================================================== */
 
-// 1. Projects Data (Updated based on user's exact tools: Antigravity, Claude Code, Codex, Pinecone)
+// 1. Projects Data (+30 Total Workflows Highlight Matrix)
 const projectsData = [
   {
     id: "nodes-mcp-1",
@@ -217,7 +217,7 @@ function renderProjects(filter = 'all') {
 
   filtered.forEach(project => {
     const card = document.createElement('div');
-    card.className = 'project-card';
+    card.className = 'project-card reveal active';
     card.innerHTML = `
       <div>
         <div class="card-header-top">
@@ -258,7 +258,46 @@ function filterProjects(cat) {
   renderProjects(cat);
 }
 
-// 3. Modal Handlers
+// 3. Theme Toggle Engine (Dark / Light Mode)
+function initTheme() {
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeIcon(savedTheme);
+}
+
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('portfolio-theme', newTheme);
+  updateThemeIcon(newTheme);
+}
+
+function updateThemeIcon(theme) {
+  const icon = document.getElementById('theme-icon');
+  if (!icon) return;
+  if (theme === 'light') {
+    icon.className = 'fa-solid fa-sun';
+  } else {
+    icon.className = 'fa-solid fa-moon';
+  }
+}
+
+// 4. Scroll Reveal Motion Observer
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach(el => observer.observe(el));
+}
+
+// 5. Modal Handlers
 function openProjectModal(id) {
   const project = projectsData.find(p => p.id === id);
   if (!project) return;
@@ -308,11 +347,11 @@ function openResumeModal() {
     </div>
 
     <h2>Professional Summary</h2>
-    <p>Computer Engineer specializing in designing, extending, and deploying autonomous AI agents, Pinecone RAG systems, and complex multi-tool automations. Skilled in leveraging AI tools (<strong>Antigravity, Claude Code, Codex, VS Code</strong>) to extend <strong>Flowise AI</strong> and <strong>n8n</strong> with native custom nodes, MCP servers, webhooks, schedulers, and database loggers.</p>
+    <p>Computer Engineer specializing in designing, extending, and deploying autonomous AI agents, Pinecone RAG systems, and complex multi-tool automations. Skilled in leveraging AI tools (<strong>Antigravity, Claude Code, Codex, VS Code</strong>) to extend <strong>Flowise AI</strong> and <strong>n8n</strong> with 30+ production workflows, native custom nodes, MCP servers, webhooks, schedulers, and database loggers.</p>
 
     <h2>Technical Skill Matrix</h2>
     <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; list-style: none; padding-left: 0;">
-      <li>⚡ <strong>Workflow AI:</strong> Flowise AI, n8n, MCP, Webhooks, Schedulers</li>
+      <li>⚡ <strong>Workflow AI:</strong> Flowise AI, n8n, MCP, Webhooks, Schedulers (+30 Workflows)</li>
       <li>🤖 <strong>AI Coding Tools:</strong> Antigravity, Claude Code, Codex, VS Code</li>
       <li>🗄️ <strong>Databases & RAG:</strong> Pinecone Vector DB, PostgreSQL, PGVector</li>
       <li>🔌 <strong>Integrations:</strong> HubSpot, Lark, ClickUp, WhatsApp, Telegram</li>
@@ -325,7 +364,7 @@ function openResumeModal() {
       <ul>
         <li>Utilized AI coding tools (Antigravity, Claude Code, Codex) to build native Flowise nodes for WhatsApp, Telegram, Gmail, and Weather.</li>
         <li>Implemented Model Context Protocol (MCP) server nodes with Claude 3.5 Sonnet.</li>
-        <li>Built LLM-to-SQL PostgreSQL query agents for Site Engineers & Field Sales.</li>
+        <li>Engineered 30+ total production AI workflows across retail, real estate, field operations, and enterprise communication.</li>
         <li>Created Pinecone Vector Database RAG search workflows for enterprise document Q&A.</li>
         <li>Built automated n8n pipelines for social publishing, RSS curation, and Trello task creation.</li>
       </ul>
@@ -350,7 +389,7 @@ function closeResumeModal() {
   document.getElementById('resume-modal').classList.remove('active');
 }
 
-// 4. Toast & Copy Email
+// 6. Toast & Copy Email
 function copyEmail() {
   const email = "mahmoudzanaty454@gmail.com";
   navigator.clipboard.writeText(email).then(() => {
@@ -364,7 +403,10 @@ function toggleMobileMenu() {
   document.getElementById('nav-links').classList.toggle('mobile-active');
 }
 
-// 5. WOW Background Canvas Motion Effect (Particle Constellation)
+// 7. Interactive Canvas Motion (Particle Constellation + Mouse Physics)
+let mouseX = -1000;
+let mouseY = -1000;
+
 function initParticleBackground() {
   const canvas = document.getElementById('particle-canvas');
   if (!canvas) return;
@@ -378,15 +420,20 @@ function initParticleBackground() {
     height = canvas.height = window.innerHeight;
   });
 
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
   const particles = [];
-  const particleCount = Math.min(Math.floor(width / 20), 60);
+  const particleCount = Math.min(Math.floor(width / 18), 70);
 
   for (let i = 0; i < particleCount; i++) {
     particles.push({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
       radius: Math.random() * 2 + 1,
       alpha: Math.random() * 0.5 + 0.2
     });
@@ -401,6 +448,19 @@ function initParticleBackground() {
 
       if (p.x < 0 || p.x > width) p.vx *= -1;
       if (p.y < 0 || p.y > height) p.vy *= -1;
+
+      // Mouse attraction
+      const mdx = mouseX - p.x;
+      const mdy = mouseY - p.y;
+      const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+      if (mdist < 140) {
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(mouseX, mouseY);
+        ctx.strokeStyle = `rgba(0, 242, 254, ${0.25 * (1 - mdist / 140)})`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
@@ -440,6 +500,8 @@ window.onclick = function(event) {
 
 // Initialize App
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   renderProjects('all');
   initParticleBackground();
+  initScrollReveal();
 });
