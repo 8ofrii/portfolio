@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Mahmoud Zanaty Portfolio - Interactive JavaScript Engine
-   Features: Theme Switcher, Scroll Reveal Animations, Interactive Canvas, Modals
+   Mahmoud Abd El-Ghaffar Portfolio - Interactive JavaScript Engine
+   Features: Theme Switcher, Heavy CV Renderer, Scroll Reveal, Canvas Physics
    ========================================================================== */
 
 // 1. Projects Data (+30 Total Workflows Highlight Matrix)
@@ -335,51 +335,96 @@ function closeProjectModal() {
   document.getElementById('project-modal').classList.remove('active');
 }
 
+// 6. Heavy, Detailed CV Renderer Modal
 function openResumeModal() {
   const resumeContainer = document.getElementById('resume-body-content');
   resumeContainer.innerHTML = `
-    <div style="border-bottom: 2px solid var(--border-color); padding-bottom: 16px; margin-bottom: 20px;">
-      <h1 style="font-size: 2.2rem; font-weight: 800;">Mahmoud Zanaty (Mahmoud Abd El Ghaffar)</h1>
-      <p style="color: var(--primary-cyan); font-weight: 700; font-size: 1.1rem;">AI & Workflow Automation Engineer | Flowise & n8n Specialist</p>
-      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">
-        📍 Benha, Egypt | ✉️ mahmoudzanaty454@gmail.com | 💼 Available for Part-Time & Contract
+    <div style="border-bottom: 2px solid var(--border-color); padding-bottom: 18px; margin-bottom: 24px;">
+      <h1 style="font-size: 2.4rem; font-weight: 800; color: var(--text-main);">Mahmoud Abd El-Ghaffar (Mahmoud Zanaty)</h1>
+      <p style="color: var(--primary-cyan); font-weight: 700; font-size: 1.15rem; margin-top: 4px;">
+        AI Agent Architect & Workflow Automation Specialist | Flowise & n8n Engineer
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px;">
+        📍 Benha / Cairo, Egypt | ✉️ mahmoudzanaty454@gmail.com | 💼 Available for Part-Time & Contract Roles
       </p>
     </div>
 
-    <h2>Professional Summary</h2>
-    <p>Computer Engineer specializing in designing, extending, and deploying autonomous AI agents, Pinecone RAG systems, and complex multi-tool automations. Skilled in leveraging AI tools (<strong>Antigravity, Claude Code, Codex, VS Code</strong>) to extend <strong>Flowise AI</strong> and <strong>n8n</strong> with 30+ production workflows, native custom nodes, MCP servers, webhooks, schedulers, and database loggers.</p>
+    <h2>Executive Summary</h2>
+    <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7;">
+      Accomplished <strong>Computer Engineer</strong> and <strong>AI Agent Architect</strong> with extensive hands-on experience designing, extending, and deploying autonomous AI agent networks, enterprise <strong>Pinecone</strong> RAG pipelines, and complex multi-platform automation systems. Engineered over <strong>30+ production workflows</strong> bridging enterprise tools (<strong>HubSpot, Lark, ClickUp, Trello, WhatsApp, Telegram, PostgreSQL</strong>) with cutting-edge LLMs (<strong>OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, Google Gemini 2.0 Flash</strong>).
+      <br><br>
+      Distinguished by an AI-accelerated engineering methodology: utilizing state-of-the-art AI development environments (<strong>Google Antigravity, Claude Code, OpenAI Codex, VS Code</strong>) to rapidly extend low-code/no-code platforms (<strong>Flowise AI, n8n</strong>) beyond default boundaries. Proven capability in engineering native custom Node.js nodes, implementing Model Context Protocol (MCP) servers, constructing LLM-to-SQL database agents, building custom Webhooks and Schedulers, and embedding PostgreSQL execution loggers for full agent observability and enterprise compliance.
+    </p>
 
-    <h2>Technical Skill Matrix</h2>
-    <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; list-style: none; padding-left: 0;">
-      <li>⚡ <strong>Workflow AI:</strong> Flowise AI, n8n, MCP, Webhooks, Schedulers (+30 Workflows)</li>
-      <li>🤖 <strong>AI Coding Tools:</strong> Antigravity, Claude Code, Codex, VS Code</li>
-      <li>🗄️ <strong>Databases & RAG:</strong> Pinecone Vector DB, PostgreSQL, PGVector</li>
-      <li>🔌 <strong>Integrations:</strong> HubSpot, Lark, ClickUp, WhatsApp, Telegram</li>
+    <h2>Core Technical Competencies</h2>
+    <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; list-style: none; padding-left: 0; margin-bottom: 24px;">
+      <li style="background: rgba(255,255,255,0.03); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+        ⚡ <strong>Workflow AI:</strong> Flowise AI (Custom Node Engine), n8n, MCP, Custom Webhooks, Schedulers (+30 Workflows)
+      </li>
+      <li style="background: rgba(255,255,255,0.03); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+        🤖 <strong>AI Coding Acceleration:</strong> Google Antigravity, Claude Code, OpenAI Codex, VS Code AI Suite
+      </li>
+      <li style="background: rgba(255,255,255,0.03); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+        🗄️ <strong>Databases & RAG:</strong> Pinecone Vector Database, PostgreSQL (LLM-to-SQL), PGVector, Embeddings
+      </li>
+      <li style="background: rgba(255,255,255,0.03); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+        🔌 <strong>Integrations:</strong> HubSpot CRM, Lark API, ClickUp API, Trello API, WhatsApp API, Telegram, Gmail
+      </li>
     </ul>
 
-    <h2>Work Experience</h2>
-    <div style="margin-bottom: 16px;">
-      <h3>AI & Automation Engineer — <em>AI MicroMind</em></h3>
-      <span style="color: var(--primary-cyan); font-size: 0.85rem;">Sep 2023 – Apr 2025</span>
-      <ul>
-        <li>Utilized AI coding tools (Antigravity, Claude Code, Codex) to build native Flowise nodes for WhatsApp, Telegram, Gmail, and Weather.</li>
-        <li>Implemented Model Context Protocol (MCP) server nodes with Claude 3.5 Sonnet.</li>
-        <li>Engineered 30+ total production AI workflows across retail, real estate, field operations, and enterprise communication.</li>
-        <li>Created Pinecone Vector Database RAG search workflows for enterprise document Q&A.</li>
-        <li>Built automated n8n pipelines for social publishing, RSS curation, and Trello task creation.</li>
+    <h2>Technical Work Experience</h2>
+    
+    <div style="margin-bottom: 24px; background: rgba(255,255,255,0.02); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
+      <h3 style="font-size: 1.3rem; font-weight: 700;">AI & Automation Engineer — <em>AI MicroMind</em></h3>
+      <span style="color: var(--primary-cyan); font-weight: 600; font-size: 0.9rem;">Sep 2023 – Apr 2025</span>
+      <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem;">
+        <li style="margin-bottom: 8px;">Applied AI coding tools (<strong>Antigravity, Claude Code, Codex</strong>) within VS Code to extend Flowise AI and n8n platform capabilities, engineering custom native nodes, custom JS functions, webhooks, and schedulers.</li>
+        <li style="margin-bottom: 8px;">Architected and deployed <strong>over 30+ production AI workflows</strong> serving retail, real estate, field engineering, operational management, and content publishing.</li>
+        <li style="margin-bottom: 8px;">Engineered 4 native Flowise integration nodes for <strong>WhatsApp, Telegram, Gmail, and Weather API</strong>, removing third-party service dependencies and granting 100% platform-level control.</li>
+        <li style="margin-bottom: 8px;">Implemented Model Context Protocol (MCP) agent nodes allowing operations teams to execute backend Node.js scripts dynamically via natural language prompts evaluated by Claude 3.5 Sonnet.</li>
+        <li style="margin-bottom: 8px;">Engineered natural-language-to-SQL query agents over PostgreSQL project databases for Site Engineers & Field Sales Dashboard managers.</li>
+        <li style="margin-bottom: 8px;">Built high-speed semantic document retrieval systems using <strong>Pinecone Vector Database</strong> and OpenAI Embeddings for enterprise RAG applications.</li>
+        <li style="margin-bottom: 8px;">Constructed a full <strong>PostgreSQL Agent Logger</strong> capturing every node input, output, tool call, and prompt into a structured audit table. Integrated <strong>LangSmith</strong> telemetry.</li>
       </ul>
     </div>
 
-    <div style="margin-bottom: 16px;">
-      <h3>Automation Engineer / Operation Engineer — <em>Operatives</em></h3>
-      <span style="color: var(--primary-cyan); font-size: 0.85rem;">Jan 2020 – Jan 2022</span>
-      <ul>
-        <li>Automated operational department cycles, eliminating manual handoffs.</li>
+    <div style="margin-bottom: 24px; background: rgba(255,255,255,0.02); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
+      <h3 style="font-size: 1.3rem; font-weight: 700;">Automation Engineer — <em>Operatives (IT Services)</em></h3>
+      <span style="color: var(--primary-cyan); font-weight: 600; font-size: 0.9rem;">Jun 2021 – Jan 2022</span>
+      <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem;">
+        <li>Analyzed cross-departmental operational cycles and engineered end-to-end automated workflows, eliminating manual data entry bottlenecks across IT operations teams.</li>
       </ul>
     </div>
+
+    <div style="margin-bottom: 24px; background: rgba(255,255,255,0.02); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
+      <h3 style="font-size: 1.3rem; font-weight: 700;">Operation Engineer & Admin — <em>Operatives (IT Services)</em></h3>
+      <span style="color: var(--primary-cyan); font-weight: 600; font-size: 0.9rem;">Jan 2020 – Jun 2021</span>
+      <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem;">
+        <li>Managed IT infrastructure operations, monitored workflow execution logs, enforced SLA compliance, and administered operational tracking systems.</li>
+      </ul>
+    </div>
+
+    <h2>Detailed Project Architecture Highlights</h2>
+    <ol style="padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+      <li style="margin-bottom: 6px;"><strong>Self-Developed Communication Nodes (Flowise):</strong> Native TypeScript/Node.js integration for WhatsApp, Telegram, Gmail, and Weather.</li>
+      <li style="margin-bottom: 6px;"><strong>MCP Agent with Claude:</strong> Model Context Protocol node triggering local backend Node.js script execution via natural language.</li>
+      <li style="margin-bottom: 6px;"><strong>Site Engineer Assistant:</strong> Secure LLM-to-SQL query generation over PostgreSQL construction databases.</li>
+      <li style="margin-bottom: 6px;"><strong>Field Sales Dashboard Agent:</strong> Van-level performance & target KPI query engine with natural language output visualization.</li>
+      <li style="margin-bottom: 6px;"><strong>Pinecone Enterprise RAG Agent:</strong> High-precision document indexing and semantic vector search powered by Pinecone & OpenAI.</li>
+      <li style="margin-bottom: 6px;"><strong>Retail Support & Installment Eligibility AI:</strong> Integrated PostgreSQL, Pinecone, HubSpot CRM, and Gmail follow-up engine.</li>
+      <li style="margin-bottom: 6px;"><strong>Real Estate Sales Assistant:</strong> Multi-modal listing search, dynamic recommendations, and instant HubSpot CRM synchronization.</li>
+      <li style="margin-bottom: 6px;"><strong>Chat-Triggered Trello Task Creator:</strong> Conversational AI node interpreting team messages into Trello cards.</li>
+      <li style="margin-bottom: 6px;"><strong>AI News & Social Publisher Bot:</strong> n8n workflow connecting NewsAPI -> Google Sheets -> Facebook Graph API.</li>
+      <li style="margin-bottom: 6px;"><strong>RSS Feed Aggregator to Airtable:</strong> Multi-feed curation pipeline with date transformation and Airtable storage.</li>
+      <li style="margin-bottom: 6px;"><strong>PostgreSQL Agent Audit Logger & LangSmith:</strong> Complete execution audit system logging inputs, outputs, tools, and prompts.</li>
+    </ol>
 
     <h2>Education</h2>
-    <p><strong>B.Sc. in Computer Engineering</strong> — Faculty of Engineering Shoubra, Benha University</p>
+    <p style="color: var(--text-main); font-weight: 600;">B.Sc. in Computer Engineering</p>
+    <p style="color: var(--text-muted); font-size: 0.95rem;">
+      Faculty of Engineering Shoubra — Benha University | Location: Benha, Egypt <br>
+      Specialization: Computer Systems Architecture, Database Management Systems, Software Engineering & AI Systems.
+    </p>
   `;
 
   document.getElementById('resume-modal').classList.add('active');
@@ -389,7 +434,7 @@ function closeResumeModal() {
   document.getElementById('resume-modal').classList.remove('active');
 }
 
-// 6. Toast & Copy Email
+// 7. Toast & Copy Email
 function copyEmail() {
   const email = "mahmoudzanaty454@gmail.com";
   navigator.clipboard.writeText(email).then(() => {
@@ -403,7 +448,7 @@ function toggleMobileMenu() {
   document.getElementById('nav-links').classList.toggle('mobile-active');
 }
 
-// 7. Interactive Canvas Motion (Particle Constellation + Mouse Physics)
+// 8. Interactive Canvas Motion (Particle Constellation + Mouse Physics)
 let mouseX = -1000;
 let mouseY = -1000;
 
