@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7f53ac" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <rect width="64" height="64" rx="16" fill="#090d16"/>
+  <!-- Outer Glow Border -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="url(#grad)" stroke-width="2" stroke-opacity="0.6"/>
+  
+  <!-- AI Workflow Node Connections -->
+  <path d="M20 32 L32 20 L44 32 L32 44 Z" fill="none" stroke="url(#grad)" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="20" cy="32" r="4" fill="#00f2fe"/>
+  <circle cx="44" cy="32" r="4" fill="#4facfe"/>
+  <circle cx="32" cy="20" r="4" fill="#7f53ac"/>
+  <circle cx="32" cy="44" r="4" fill="#38ef7d"/>
+  <circle cx="32" cy="32" r="5" fill="url(#grad)"/>
+</svg>

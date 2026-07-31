@@ -1,10 +1,6 @@
 services:
   - type: web
-    name: mahmoud-zanaty-portfolio
+    name: mahmoud-abd-el-ghaffar-portfolio
     env: static
     buildCommand: ""
     staticPublishPath: ./
-    headers:
-      - path: /*
-        name: Cache-Control
-        value: no-cache
