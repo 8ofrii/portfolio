@@ -8,13 +8,13 @@ const projectsData = [
   {
     id: "nodes-mcp-1",
     category: "nodes-mcp",
-    title: "Self-Developed Flowise Communication Nodes",
-    subtitle: "Native integrations for WhatsApp, Telegram, Gmail, & Weather",
+    title: "Self-Developed Flowise Communication Nodes (10+ Nodes)",
+    subtitle: "Native integrations for WhatsApp, Telegram, Gmail, Weather, & Custom Webhooks",
     icon: "fa-brands fa-whatsapp",
-    summary: "Built native Flowise nodes for WhatsApp, Telegram, Gmail, and Weather using AI coding tools (Antigravity, Claude Code) to enable direct message alerts without third-party platform limitations.",
+    summary: "Built over 10+ native Flowise nodes for WhatsApp, Telegram, Gmail, Weather, MCP, and PostgreSQL Audit logging using AI coding tools (Antigravity, Claude Code) to enable direct message alerts without third-party platform limitations.",
     tech: ["Flowise AI", "Antigravity", "Claude Code", "WhatsApp API", "Telegram API", "Gmail API"],
     details: {
-      overview: "Standard low-code tools rely on complex webhook wrappers. I engineered native custom nodes directly within Flowise node architecture for WhatsApp, Telegram, Gmail, and Weather API using AI coding assistants.",
+      overview: "Standard low-code tools rely on complex webhook wrappers. I engineered over 10+ native custom nodes directly within Flowise node architecture for WhatsApp, Telegram, Gmail, Weather API, MCP Client, and PostgreSQL Loggers using AI coding assistants.",
       architecture: [
         "Built custom Node.js node handlers using Antigravity and Claude Code.",
         "Integrated native parameters directly into Flowise canvas UI.",
@@ -351,15 +351,15 @@ function openResumeModal() {
 
     <h2>Executive Summary</h2>
     <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7;">
-      Accomplished <strong>Computer Engineer</strong> and <strong>AI Agent Architect</strong> with extensive hands-on experience designing, extending, and deploying autonomous AI agent networks, enterprise <strong>Pinecone</strong> RAG pipelines, and complex multi-platform automation systems. Engineered over <strong>30+ production workflows</strong> bridging enterprise tools (<strong>HubSpot, Lark, ClickUp, Trello, WhatsApp, Telegram, PostgreSQL</strong>) with cutting-edge LLMs (<strong>OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, Google Gemini 2.0 Flash</strong>).
+      Accomplished <strong>Computer Engineer</strong> and <strong>AI Agent Architect</strong> with extensive hands-on experience designing, extending, and deploying autonomous AI agent networks, enterprise <strong>Pinecone</strong> RAG pipelines, and complex multi-platform automation systems. Engineered over <strong>30+ production workflows</strong> and <strong>10+ native custom Flowise nodes</strong> bridging enterprise tools (<strong>HubSpot, Lark, ClickUp, Trello, WhatsApp, Telegram, PostgreSQL</strong>) with cutting-edge LLMs (<strong>OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, Google Gemini 2.0 Flash</strong>).
       <br><br>
-      Distinguished by an AI-accelerated engineering methodology: utilizing state-of-the-art AI development environments (<strong>Google Antigravity, Claude Code, OpenAI Codex, VS Code</strong>) to rapidly extend low-code/no-code platforms (<strong>Flowise AI, n8n</strong>) beyond default boundaries. Proven capability in engineering native custom Node.js nodes, implementing Model Context Protocol (MCP) servers, constructing LLM-to-SQL database agents, building custom Webhooks and Schedulers, and embedding PostgreSQL execution loggers for full agent observability and enterprise compliance.
+      Distinguished by an AI-accelerated engineering methodology: utilizing state-of-the-art AI development environments (<strong>Google Antigravity, Claude Code, OpenAI Codex, VS Code</strong>) to rapidly extend low-code/no-code platforms (<strong>Flowise AI, n8n</strong>) beyond default boundaries. Proven capability in engineering 10+ native custom Node.js nodes, implementing Model Context Protocol (MCP) servers, constructing LLM-to-SQL database agents, building custom Webhooks and Schedulers, and embedding PostgreSQL execution loggers for full agent observability and enterprise compliance.
     </p>
 
     <h2>Core Technical Competencies</h2>
     <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; list-style: none; padding-left: 0; margin-bottom: 24px;">
       <li style="background: rgba(255,255,255,0.03); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-color);">
-        ⚡ <strong>Workflow AI:</strong> Flowise AI (Custom Node Engine), n8n, MCP, Custom Webhooks, Schedulers (+30 Workflows)
+        ⚡ <strong>Workflow AI:</strong> Flowise AI (10+ Custom Nodes Engine), n8n, MCP, Webhooks, Schedulers (+30 Workflows)
       </li>
       <li style="background: rgba(255,255,255,0.03); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-color);">
         🤖 <strong>AI Coding Acceleration:</strong> Google Antigravity, Claude Code, OpenAI Codex, VS Code AI Suite
@@ -375,12 +375,12 @@ function openResumeModal() {
     <h2>Technical Work Experience</h2>
     
     <div style="margin-bottom: 24px; background: rgba(255,255,255,0.02); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
-      <h3 style="font-size: 1.3rem; font-weight: 700;">AI & Automation Engineer — <em>AI MicroMind</em></h3>
+      <h3 style="font-size: 1.3rem; font-weight: 700;">AI & Automation Engineer — <em>MicroMind</em></h3>
       <span style="color: var(--primary-cyan); font-weight: 600; font-size: 0.9rem;">Sep 2023 – Apr 2025</span>
       <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem;">
         <li style="margin-bottom: 8px;">Applied AI coding tools (<strong>Antigravity, Claude Code, Codex</strong>) within VS Code to extend Flowise AI and n8n platform capabilities, engineering custom native nodes, custom JS functions, webhooks, and schedulers.</li>
         <li style="margin-bottom: 8px;">Architected and deployed <strong>over 30+ production AI workflows</strong> serving retail, real estate, field engineering, operational management, and content publishing.</li>
-        <li style="margin-bottom: 8px;">Engineered 4 native Flowise integration nodes for <strong>WhatsApp, Telegram, Gmail, and Weather API</strong>, removing third-party service dependencies and granting 100% platform-level control.</li>
+        <li style="margin-bottom: 8px;">Engineered <strong>over 10+ native Flowise integration nodes</strong> for <strong>WhatsApp, Telegram, Gmail, Weather API, MCP Client, PostgreSQL Logger, Pinecone Handler, Custom Webhooks, Cron Schedulers, and Custom JS Nodes</strong>, removing third-party service dependencies and granting 100% platform-level control.</li>
         <li style="margin-bottom: 8px;">Implemented Model Context Protocol (MCP) agent nodes allowing operations teams to execute backend Node.js scripts dynamically via natural language prompts evaluated by Claude 3.5 Sonnet.</li>
         <li style="margin-bottom: 8px;">Engineered natural-language-to-SQL query agents over PostgreSQL project databases for Site Engineers & Field Sales Dashboard managers.</li>
         <li style="margin-bottom: 8px;">Built high-speed semantic document retrieval systems using <strong>Pinecone Vector Database</strong> and OpenAI Embeddings for enterprise RAG applications.</li>
@@ -406,7 +406,7 @@ function openResumeModal() {
 
     <h2>Detailed Project Architecture Highlights</h2>
     <ol style="padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
-      <li style="margin-bottom: 6px;"><strong>Self-Developed Communication Nodes (Flowise):</strong> Native TypeScript/Node.js integration for WhatsApp, Telegram, Gmail, and Weather.</li>
+      <li style="margin-bottom: 6px;"><strong>Self-Developed Custom Flowise Nodes (10+ Nodes):</strong> Native TypeScript/Node.js integration for WhatsApp, Telegram, Gmail, Weather, MCP, PostgreSQL Logger, Pinecone, Schedulers, and Webhooks.</li>
       <li style="margin-bottom: 6px;"><strong>MCP Agent with Claude:</strong> Model Context Protocol node triggering local backend Node.js script execution via natural language.</li>
       <li style="margin-bottom: 6px;"><strong>Site Engineer Assistant:</strong> Secure LLM-to-SQL query generation over PostgreSQL construction databases.</li>
       <li style="margin-bottom: 6px;"><strong>Field Sales Dashboard Agent:</strong> Van-level performance & target KPI query engine with natural language output visualization.</li>
