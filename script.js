@@ -107,7 +107,7 @@ const projectsData = [
     title: "DevOps, Containerization & Cloud Infrastructure",
     subtitle: "AWS, Docker, DigitalOcean VPS, Render & GitHub Suite",
     category: "infra",
-    categoryLabel: "Infrastructure & Observability",
+    categoryLabel: "DevOps & Infrastructure",
     icon: "fa-brands fa-docker",
     desc: "Containerized deployment and hosting environment management across AWS, Docker, DigitalOcean Linux VPS, Render, and GitHub Actions.",
     techStack: ["Docker", "AWS", "DigitalOcean VPS", "Render", "GitHub Actions", "Linux Administration"],

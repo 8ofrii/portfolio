@@ -16,13 +16,13 @@ function generateResumePDF(outputPath) {
   const darkColor = '#0f172a';
   const textColor = '#334155';
 
-  // Header
+  // Header (GitHub URL removed)
   doc.fillColor(darkColor).fontSize(21).font('Helvetica-Bold').text('Mahmoud Abd El-Ghaffar (Mahmoud Zanaty)', { align: 'left' });
   doc.moveDown(0.2);
   doc.fillColor(primaryColor).fontSize(11.5).font('Helvetica-Bold').text('AI Agent Architect & Workflow Automation Specialist | Flowise, LangChain & n8n Engineer');
   doc.moveDown(0.3);
   doc.fillColor(textColor).fontSize(9).font('Helvetica').text('Location: Benha / Cairo, Egypt  |  Phone: +20 102 419 0741  |  Email: mahmoudzanaty454@gmail.com');
-  doc.fillColor(primaryColor).fontSize(9).font('Helvetica-Bold').text('LinkedIn: https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/  |  GitHub: https://github.com/8ofrii/portfolio');
+  doc.fillColor(primaryColor).fontSize(9).font('Helvetica-Bold').text('LinkedIn: https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/');
   doc.moveDown(0.6);
 
   // Divider Line
