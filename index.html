@@ -24,7 +24,7 @@
     <span id="toast-message">Copied to clipboard!</span>
   </div>
 
-  <!-- Navigation Bar (Icon Removed as Requested) -->
+  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#" class="nav-brand">
@@ -49,6 +49,9 @@
         <button class="btn btn-outline" onclick="openResumeModal()">
           <i class="fa-solid fa-file-contract"></i> View CV
         </button>
+        <a href="resume.html" target="_blank" class="btn btn-outline" title="Open PDF Ready Resume">
+          <i class="fa-solid fa-file-pdf"></i> PDF CV
+        </a>
         <a href="#contact" class="btn btn-primary">
           <i class="fa-solid fa-paper-plane"></i> Contact
         </a>
@@ -84,9 +87,9 @@
         <a href="#workflows" class="btn btn-primary btn-lg">
           <i class="fa-solid fa-rocket"></i> Explore Workflows (+30)
         </a>
-        <button class="btn btn-glass btn-lg" onclick="openResumeModal()">
-          <i class="fa-solid fa-file-pdf"></i> View Detailed CV
-        </button>
+        <a href="resume.html" target="_blank" class="btn btn-glass btn-lg">
+          <i class="fa-solid fa-file-pdf"></i> Open & Save PDF CV
+        </a>
         <button class="btn btn-outline btn-lg" onclick="copyEmail()">
           <i class="fa-solid fa-copy"></i> Copy Email
         </button>
@@ -420,7 +423,10 @@
       <div class="modal-header">
         <h2><i class="fa-solid fa-file-user"></i> Mahmoud Abd El-Ghaffar - Curriculum Vitae</h2>
         <div class="modal-header-actions">
-          <button class="btn btn-primary btn-sm" onclick="window.print()">
+          <a href="resume.html" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-file-pdf"></i> Open PDF Version
+          </a>
+          <button class="btn btn-outline btn-sm" onclick="window.print()">
             <i class="fa-solid fa-print"></i> Print / Save PDF
           </button>
           <button class="modal-close" onclick="closeResumeModal()">&times;</button>
