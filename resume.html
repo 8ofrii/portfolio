@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahmoud Abd El-Ghaffar - Resume PDF</title>
+  <title>Mahmoud Abd El-Ghaffar - Resume</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -17,25 +17,52 @@
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       color: #0f172a;
-      background-color: #f8fafc;
-      padding: 40px 20px;
+      background-color: #f1f5f9;
+      padding: 36px 20px;
       line-height: 1.5;
     }
+    .print-bar {
+      max-width: 860px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+      color: #fff;
+      padding: 14px 24px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .print-btn {
+      background: #0284c7;
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .print-btn:hover {
+      background: #0369a1;
+    }
     .page-container {
-      max-width: 840px;
+      max-width: 860px;
       margin: 0 auto;
       background: #ffffff;
-      padding: 40px 50px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      border-radius: 8px;
+      padding: 44px 52px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.07);
+      border-radius: 10px;
     }
     .header {
-      border-bottom: 2px solid #0284c7;
+      border-bottom: 2.5px solid #0284c7;
       padding-bottom: 16px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
     .header h1 {
-      font-size: 26px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 28px;
       font-weight: 800;
       color: #0f172a;
       margin-bottom: 4px;
@@ -44,7 +71,8 @@
       font-size: 14.5px;
       font-weight: 700;
       color: #0284c7;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      letter-spacing: 0.2px;
     }
     .header .contact-info {
       font-size: 13px;
@@ -52,19 +80,22 @@
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
+      font-weight: 500;
     }
     .header .contact-info a {
       color: #0284c7;
       text-decoration: none;
+      font-weight: 600;
     }
     h2 {
+      font-family: 'Outfit', sans-serif;
       font-size: 15px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
       color: #0f172a;
       border-bottom: 1.5px solid #e2e8f0;
-      padding-bottom: 4px;
+      padding-bottom: 5px;
       margin: 22px 0 12px;
     }
     p {
@@ -72,6 +103,7 @@
       color: #334155;
       margin-bottom: 10px;
       line-height: 1.6;
+      text-align: justify;
     }
     .skills-grid {
       display: grid;
@@ -80,11 +112,13 @@
       margin-bottom: 16px;
     }
     .skill-box {
-      background: #f1f5f9;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
       padding: 8px 12px;
       border-radius: 6px;
       font-size: 12px;
       color: #1e293b;
+      line-height: 1.45;
     }
     .skill-box strong {
       color: #0284c7;
@@ -96,22 +130,25 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
     .exp-role {
-      font-size: 14.5px;
-      font-weight: 700;
+      font-size: 15px;
+      font-weight: 800;
       color: #0f172a;
     }
     .exp-company {
-      font-size: 13.5px;
-      font-weight: 600;
+      font-size: 14px;
+      font-weight: 700;
       color: #0284c7;
     }
     .exp-date {
       font-size: 12.5px;
-      font-weight: 600;
+      font-weight: 700;
       color: #64748b;
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 4px;
     }
     ul {
       padding-left: 18px;
@@ -120,32 +157,12 @@
     li {
       font-size: 12.8px;
       color: #334155;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       line-height: 1.55;
+      text-align: justify;
     }
-    .print-bar {
-      max-width: 840px;
-      margin: 0 auto 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #0f172a;
-      color: #fff;
-      padding: 14px 24px;
-      border-radius: 8px;
-    }
-    .print-btn {
-      background: #0284c7;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 14px;
-      cursor: pointer;
-    }
-    .print-btn:hover {
-      background: #0369a1;
+    li strong {
+      color: #0f172a;
     }
 
     @media print {
@@ -199,7 +216,7 @@
 
     <h2>Core Technical Competencies</h2>
     <div class="skills-grid">
-      <div class="skill-box">⚡ <strong>Workflow & Frameworks:</strong> MicroMind Platform (30+ Native Core Nodes), n8n, LangChain (Expert), LangGraph (Advanced), MCP, Webhooks</div>
+      <div class="skill-box">⚡ <strong>Workflow & Agent Frameworks:</strong> MicroMind Platform (30+ Native Core Nodes), n8n, LangChain (Expert), LangGraph (Advanced), MCP, Webhooks</div>
       <div class="skill-box">🤖 <strong>AI Development Acceleration:</strong> Google Antigravity, Claude Code, OpenAI Codex, VS Code AI Suite, GPT-4o, Gemini 2.0</div>
       <div class="skill-box">📊 <strong>ERP & Database BI:</strong> Natural Language Queries over Oracle, Microsoft Dynamics, SAP, Odoo, Oracle Fusion, Dynamics 365 OData, SQL</div>
       <div class="skill-box">🗄️ <strong>Databases & RAG:</strong> Pinecone Vector Database, PostgreSQL (LLM-to-SQL & Audit Logger), PGVector, OpenAI Embeddings</div>
@@ -217,7 +234,7 @@
         <span class="exp-date">2024 – 2026</span>
       </div>
       <ul>
-        <li>Built and co-built <strong>30+ native integration nodes directly in AI MicroMind Core</strong> for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI tools (<strong>Antigravity, Claude Code, Codex</strong>).</li>
+        <li>Built and co-built <strong>30+ native integration nodes directly in AI MicroMind Core</strong> (Node.js runtime) for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI tools (<strong>Antigravity, Claude Code, Codex</strong>).</li>
         <li>Architected and deployed the <strong>AI MicroMind App</strong> featuring the <strong>Rebort Bot Framework</strong> and <strong>Advanced BI & Reporting Tools</strong>. Enabled enterprise users to ask natural language questions directly to AI agents to extract live operational insights from on-premise ERPs (<strong>Oracle, Microsoft Dynamics, SAP, Odoo, SQL</strong>) and cloud platforms (<strong>Oracle Fusion, Dynamics 365 OData</strong>).</li>
         <li>Engineered full-stack mobile applications (front-end & back-end) and built <strong>AI MicroMind MicroApps</strong>, creating modular bridges to integrate third-party applications seamlessly into the MicroMind ecosystem.</li>
         <li>Developed custom integration applications and automated workflows across <strong>Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, Facebook Messenger, and WAPA</strong>.</li>

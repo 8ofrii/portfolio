@@ -38,23 +38,26 @@
     <div class="nav-container">
       <a href="#" class="nav-brand">
         <span class="brand-text">Mahmoud <strong>Abd El-Ghaffar</strong></span>
+        <span class="brand-badge">AI ARCHITECT</span>
       </a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#architecture">Architecture</a></li>
         <li><a href="#workflows">Workflows (+30)</a></li>
         <li><a href="#custom-nodes">AI-Powered Dev</a></li>
         <li><a href="#skills">Tech Stack</a></li>
         <li><a href="#experience">Experience</a></li>
       </ul>
       <div class="nav-actions">
-        <!-- Social Link Header Icons -->
+        <!-- LinkedIn Profile Icon -->
         <a href="https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/" target="_blank" rel="noopener" class="header-social-link" title="LinkedIn Profile">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
-        <!-- Light / Dark Theme Toggle Button -->
+        <!-- Dark / Light Theme Switcher -->
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme" onclick="toggleTheme()">
           <i class="fa-solid fa-moon" id="theme-icon"></i>
         </button>
+        <!-- Open Printable Web CV in New Tab -->
         <a href="resume.html" target="_blank" class="btn btn-outline">
           <i class="fa-solid fa-file-contract"></i> View CV
         </a>
@@ -71,9 +74,13 @@
   <!-- Hero Section -->
   <section id="about" class="hero-section">
     <div class="hero-container">
+      <div class="hero-pill-badge reveal">
+        <span class="pulse-dot"></span> Available for Enterprise AI Architecture & Workflow Engineering
+      </div>
+
       <h1 class="hero-title reveal">
         AI Agent Architect & <br>
-        <span class="gradient-text">Workflow Automation Builder</span>
+        <span class="gradient-text">Enterprise Workflow Specialist</span>
       </h1>
       <p class="hero-subtitle reveal">
         Computer Engineer specializing in <strong>AI MicroMind Platform (30+ Native Core Nodes)</strong>, <strong>n8n</strong>, <strong>LangChain (Expert)</strong>, <strong>LangGraph (Advanced)</strong>, and <strong>Rebort Bot BI Engine</strong> over enterprise ERPs (<strong>Oracle, SAP, Microsoft Dynamics, Odoo, Oracle Fusion, Dynamics 365 OData</strong>). Architect of the <strong>AI MicroMind Ecosystem</strong>, Mobile Applications, MicroApps, and 30+ production workflows.
@@ -105,18 +112,72 @@
         <div class="metric-card">
           <div class="metric-num">+30</div>
           <div class="metric-label">Production AI Workflows Built</div>
+          <div class="metric-sub">Enterprise agent automation</div>
         </div>
         <div class="metric-card">
           <div class="metric-num">30+ Native</div>
           <div class="metric-label">Built / Co-Built MicroMind Core Nodes</div>
+          <div class="metric-sub">WAPA, MCP, Pinecone & Schedulers</div>
         </div>
         <div class="metric-card">
           <div class="metric-num">Rebort Bot</div>
           <div class="metric-label">Conversational BI Engine for ERP & SQL</div>
+          <div class="metric-sub">Oracle, SAP, Dynamics, Odoo</div>
         </div>
         <div class="metric-card">
           <div class="metric-num">12+ Dev</div>
           <div class="metric-label">App & Platform Integrations Built</div>
+          <div class="metric-sub">Lark, Bubble.io, Teamwork, ConnectWise</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Ecosystem Architecture Section -->
+  <section id="architecture" class="section glass-section">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">SYSTEM ARCHITECTURE</span>
+        <h2 class="section-title">The AI MicroMind Autonomous Ecosystem</h2>
+        <p class="section-desc">A unified 3-tier topology linking mobile clients and 12+ third-party tools to the central AI execution core and enterprise ERP databases.</p>
+      </div>
+
+      <div class="arch-visualizer-card reveal">
+        <div class="arch-header">
+          <div class="arch-title"><i class="fa-solid fa-sitemap" style="color: var(--primary-cyan); margin-right: 8px;"></i> 3-Tier Enterprise Agent Topology</div>
+          <span class="card-category-badge">LIVE PRODUCTION ARCHITECTURE</span>
+        </div>
+
+        <div class="arch-flow-grid">
+          <!-- Tier 1 -->
+          <div class="arch-tier">
+            <span class="tier-badge">TIER 1 — CLIENT & INTEGRATION LAYER</span>
+            <h3 class="tier-title">Mobile Apps & MicroApps</h3>
+            <p class="tier-desc">Cross-platform mobile interfaces (React Native/Flutter), AI MicroMind MicroApps middleware, and bidirectional webhooks across 12+ platforms.</p>
+            <div class="tier-chips">
+              <span>Mobile Apps</span> <span>Lark Suite</span> <span>Bubble.io</span> <span>Teamwork</span> <span>ConnectWise</span> <span>WAPA</span> <span>Zoom/Slack</span>
+            </div>
+          </div>
+
+          <!-- Tier 2 -->
+          <div class="arch-tier">
+            <span class="tier-badge">TIER 2 — AI CORE & REBORT BOT BI</span>
+            <h3 class="tier-title">MicroMind Core & Agent Graphs</h3>
+            <p class="tier-desc">The central execution engine containing 30+ native nodes, the Rebort Bot BI conversational parser, MCP tool dispatchers, and LangGraph supervisors.</p>
+            <div class="tier-chips">
+              <span>30+ Native Nodes</span> <span>Rebort Bot BI</span> <span>LangChain (Expert)</span> <span>LangGraph</span> <span>MCP Server</span> <span>PostgreSQL Logger</span>
+            </div>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="arch-tier">
+            <span class="tier-badge">TIER 3 — DATA, ERPS & INFRASTRUCTURE</span>
+            <h3 class="tier-title">ERPs, Vector DB & Cloud DevOps</h3>
+            <p class="tier-desc">Direct parameterized querying into enterprise relational databases, Pinecone RAG semantic indices, and containerized Docker/VPS hosting.</p>
+            <div class="tier-chips">
+              <span>Oracle ERP / Fusion</span> <span>Dynamics 365 OData</span> <span>SAP / Odoo</span> <span>Pinecone Vector DB</span> <span>Docker / AWS</span> <span>Render / VPS</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -128,30 +189,28 @@
       <div class="section-header reveal">
         <span class="section-subtitle">PORTFOLIO SHOWCASE</span>
         <h2 class="section-title">Featured AI Agents & Workflows</h2>
-        <p class="section-desc">Interactive breakdown of production AI systems, 30+ MicroMind Core native nodes, architecture designs, and n8n automated pipelines.</p>
+        <p class="section-desc">Interactive breakdown of production AI systems, 30+ MicroMind Core native nodes, architecture designs, and automated pipelines.</p>
       </div>
 
-      <!-- Widget Callout for +30 Workflows -->
-      <div class="workflow-count-widget reveal">
-        <div class="widget-badge">+30</div>
-        <div class="widget-text">
-          <strong>Over 30+ Enterprise AI Workflows & 30+ Built/Co-built MicroMind Core Native Nodes</strong>
-          <p>Displaying key featured architecture showcases below from a portfolio of 30+ custom AI agents, 30+ native nodes, Rebort Bot BI framework over ERPs, webhooks, schedulers, and n8n pipelines.</p>
+      <!-- Live Search and Filter Controls -->
+      <div class="workflow-controls reveal">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="workflow-search" class="search-input" placeholder="Search by keyword (e.g., ERP, nodes, mobile, LangGraph, Docker)..." autocomplete="off">
+        </div>
+
+        <div class="filter-tabs">
+          <button class="tab-btn active" onclick="filterProjects('all')">All Featured</button>
+          <button class="tab-btn" onclick="filterProjects('arch')">Architecture & System Design</button>
+          <button class="tab-btn" onclick="filterProjects('nodes-mcp')">Custom Nodes & MCP</button>
+          <button class="tab-btn" onclick="filterProjects('ai-agents')">AI Agents & Pinecone RAG</button>
+          <button class="tab-btn" onclick="filterProjects('infra')">DevOps & Infrastructure</button>
         </div>
       </div>
 
-      <!-- Category Filter Tabs -->
-      <div class="filter-tabs reveal">
-        <button class="tab-btn active" onclick="filterProjects('all')">All Featured</button>
-        <button class="tab-btn" onclick="filterProjects('arch')">Architecture & System Design</button>
-        <button class="tab-btn" onclick="filterProjects('nodes-mcp')">Custom Nodes & MCP</button>
-        <button class="tab-btn" onclick="filterProjects('ai-agents')">AI Agents & Pinecone RAG</button>
-        <button class="tab-btn" onclick="filterProjects('infra')">DevOps & Infrastructure</button>
-      </div>
-
-      <!-- Project Cards Grid -->
+      <!-- Project Cards Grid (Rendered Dynamically) -->
       <div class="projects-grid" id="projects-grid">
-        <!-- Cards rendered via JavaScript -->
+        <!-- Rendered via JavaScript -->
       </div>
     </div>
   </section>
@@ -316,7 +375,7 @@
             <h3 class="timeline-role">Automation Engineer</h3>
             <h4 class="timeline-company">Operatives (IT Company)</h4>
             <p class="timeline-desc">
-              Automated operational lifecycles previously executed manually across department teams, streamlining cross-functional handoffs.
+              Automated operational lifecycles previously executed manually across department teams, eliminating manual data entry bottlenecks across IT operations teams.
             </p>
             <div class="timeline-tags">
               <span>Process Automation</span> <span>Workflow Optimization</span> <span>IT Ops</span>
@@ -349,7 +408,7 @@
     </div>
   </section>
 
-  <!-- Contact Section (Redesigned & Spacious) -->
+  <!-- Contact Section -->
   <section id="contact" class="section glass-section">
     <div class="section-container">
       <div class="contact-card reveal">
