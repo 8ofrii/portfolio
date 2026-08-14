@@ -10,8 +10,8 @@ function generateResumePDF(outputPath) {
     info: {
       Title: 'Mahmoud Abd El-Ghaffar - Resume',
       Author: 'Mahmoud Abd El-Ghaffar',
-      Subject: 'Lead AI & Automation Architect Resume',
-      Keywords: 'Lead AI Architect, Multi-Agent Systems, MicroMind Platform, LangChain, LangGraph, n8n, Pinecone, RAG, Rebort Bot, Oracle ERP, Microsoft Dynamics, SAP, Odoo, SQL, Docker, AWS, Python, Node.js'
+      Subject: 'AI & Automation Architect Resume',
+      Keywords: 'AI & Automation Architect, Multi-Agent Systems, Enterprise ERP BI, Core Platform Engineering, MicroMind Platform, LangChain, LangGraph, n8n, Pinecone, RAG, Rebort Bot, Oracle ERP, Microsoft Dynamics, SAP, Odoo, SQL, Docker, AWS, Python, Node.js'
     }
   });
 
@@ -34,7 +34,7 @@ function generateResumePDF(outputPath) {
   // ==========================================
   doc.fillColor(darkColor).fontSize(20).font('Helvetica-Bold').text('MAHMOUD ABD EL-GHAFFAR', { align: 'left' });
   doc.moveDown(0.15);
-  doc.fillColor(primaryColor).fontSize(10.5).font('Helvetica-Bold').text('Lead AI & Automation Architect  |  Multi-Agent Systems, Enterprise ERP BI & Core Engineering');
+  doc.fillColor(primaryColor).fontSize(10.5).font('Helvetica-Bold').text('AI & Automation Architect  |  Multi-Agent Systems, Enterprise ERP BI & Core Engineering');
   doc.moveDown(0.25);
 
   // Contact line 1: Location, Phone (Hyperlinked), Email (Hyperlinked)
