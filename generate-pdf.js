@@ -18,45 +18,55 @@ function generateResumePDF(outputPath) {
   const stream = fs.createWriteStream(outputPath);
   doc.pipe(stream);
 
-  // Design Tokens (ATS-Optimized Palette)
-  const primaryColor = '#0284c7';      // Professional Sky Blue Accent
-  const darkColor = '#0f172a';         // Slate 900 for Headings
-  const bodyTextColor = '#334155';     // Slate 700 for Body
-  const mutedColor = '#64748b';        // Slate 500 for Dates/Subtitles
-  const ruleColor = '#cbd5e1';         // Slate 300 for Dividers
+  // Design Tokens
+  const primaryColor = '#0284c7';      // Professional Blue for Links & Highlights
+  const darkColor = '#0f172a';         // Dark Slate for Headings
+  const bodyTextColor = '#334155';     // Slate for Body Text
+  const mutedColor = '#64748b';        // Muted Slate for Separators
+  const ruleColor = '#cbd5e1';         // Light Gray for Dividers
 
   // Page Width calculation
   const pageWidth = 595.28;
   const margin = 34;
-  const contentWidth = pageWidth - (margin * 2); // 527.28 pt
 
   // ==========================================
-  // 1. HEADER SECTION
+  // 1. HEADER SECTION (WITH DIRECT HYPERLINKS)
   // ==========================================
   doc.fillColor(darkColor).fontSize(20).font('Helvetica-Bold').text('MAHMOUD ABD EL-GHAFFAR', { align: 'left' });
   doc.moveDown(0.15);
   doc.fillColor(primaryColor).fontSize(10.5).font('Helvetica-Bold').text('AI Agent Architect & Enterprise Workflow Specialist  |  MicroMind, LangChain & n8n Engineer');
   doc.moveDown(0.25);
 
-  // Contact line 1: Location, Phone, Email
-  doc.fillColor(bodyTextColor).fontSize(8.5).font('Helvetica');
-  doc.text('Location: Benha / Cairo, Egypt   •   Phone / WhatsApp: +20 102 419 0741   •   Email: mahmoudzanaty454@gmail.com');
+  // Contact line 1: Location, Phone (Hyperlinked), Email (Hyperlinked)
+  doc.fillColor(bodyTextColor).fontSize(8.5).font('Helvetica').text('Location: Benha / Cairo, Egypt   •   Phone: ', { continued: true });
+  doc.fillColor(primaryColor).font('Helvetica-Bold').text('+20 102 419 0741', {
+    link: 'tel:+201024190741',
+    underline: true,
+    continued: true
+  });
+  doc.fillColor(bodyTextColor).font('Helvetica').text('   •   Email: ', { continued: true });
+  doc.fillColor(primaryColor).font('Helvetica-Bold').text('mahmoudzanaty454@gmail.com', {
+    link: 'mailto:mahmoudzanaty454@gmail.com',
+    underline: true
+  });
   
-  // Contact line 2: LinkedIn & Portfolio (with clickable links)
+  // Contact line 2: LinkedIn (Hyperlinked) & Live Portfolio (Hyperlinked)
   doc.moveDown(0.15);
-  const linkY = doc.y;
-  doc.fillColor(primaryColor).font('Helvetica-Bold');
-  doc.text('LinkedIn: linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219', margin, linkY, {
+  doc.fillColor(bodyTextColor).fontSize(8.5).font('Helvetica').text('LinkedIn: ', { continued: true });
+  doc.fillColor(primaryColor).font('Helvetica-Bold').text('linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219', {
     link: 'https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/',
+    underline: true,
     continued: true
   });
   doc.fillColor(mutedColor).font('Helvetica').text('   •   ', { continued: true });
-  doc.fillColor(primaryColor).font('Helvetica-Bold').text('Portfolio: https://portfolio-mrt6.onrender.com/', {
-    link: 'https://portfolio-mrt6.onrender.com/'
+  doc.fillColor(bodyTextColor).font('Helvetica').text('Live Portfolio: ', { continued: true });
+  doc.fillColor(primaryColor).font('Helvetica-Bold').text('https://portfolio-mrt6.onrender.com/', {
+    link: 'https://portfolio-mrt6.onrender.com/',
+    underline: true
   });
 
   doc.moveDown(0.4);
-  // Header Accent Rule
+  // Header Divider Rule
   doc.strokeColor(primaryColor).lineWidth(1.2).moveTo(margin, doc.y).lineTo(pageWidth - margin, doc.y).stroke();
   doc.moveDown(0.35);
 
@@ -167,7 +177,7 @@ function generateResumePDF(outputPath) {
   doc.end();
 
   stream.on('finish', () => {
-    console.log(`Successfully generated ATS-compliant PDF resume at: ${outputPath}`);
+    console.log(`Successfully generated ATS-compliant PDF resume with direct hyperlinks at: ${outputPath}`);
   });
 }
 
