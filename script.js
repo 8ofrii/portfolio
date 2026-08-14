@@ -305,7 +305,7 @@ function openResumeModal() {
     <div class="resume-rendered">
       <h1>MAHMOUD ABD EL-GHAFFAR (Mahmoud Zanaty)</h1>
       <p style="color: var(--primary-cyan); font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">
-        AI & Automation Architect | Multi-Agent Systems, Enterprise ERP BI & Core Engineering
+        AI Automation & Integration Architect | Multi-Agent Systems, Enterprise ERP BI & Core Engineering
       </p>
       <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 14px;">
         <span>📍 Benha / Cairo, Egypt</span>
