@@ -62,13 +62,14 @@
     }
     .header h1 {
       font-family: 'Outfit', sans-serif;
-      font-size: 28px;
+      font-size: 27px;
       font-weight: 800;
       color: #0f172a;
+      letter-spacing: -0.5px;
       margin-bottom: 4px;
     }
     .header .title {
-      font-size: 14.5px;
+      font-size: 14px;
       font-weight: 700;
       color: #0284c7;
       margin-bottom: 10px;
@@ -81,69 +82,75 @@
       flex-wrap: wrap;
       gap: 16px;
       font-weight: 500;
+      margin-bottom: 6px;
     }
-    .header .contact-info a {
+    .header .contact-links {
+      font-size: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+    .header a {
       color: #0284c7;
       text-decoration: none;
       font-weight: 600;
     }
+    .header a:hover {
+      text-decoration: underline;
+    }
     h2 {
       font-family: 'Outfit', sans-serif;
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.8px;
       color: #0f172a;
       border-bottom: 1.5px solid #e2e8f0;
-      padding-bottom: 5px;
-      margin: 22px 0 12px;
+      padding-bottom: 4px;
+      margin: 20px 0 10px;
     }
     p {
-      font-size: 13px;
+      font-size: 12.8px;
       color: #334155;
       margin-bottom: 10px;
       line-height: 1.6;
       text-align: justify;
     }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 16px;
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
     }
-    .skill-box {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-size: 12px;
-      color: #1e293b;
-      line-height: 1.45;
+    .skill-row {
+      font-size: 12.5px;
+      color: #334155;
+      line-height: 1.5;
     }
-    .skill-box strong {
-      color: #0284c7;
+    .skill-row strong {
+      color: #0f172a;
     }
     .exp-item {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
     .exp-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
     .exp-role {
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 800;
       color: #0f172a;
     }
     .exp-company {
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
       color: #0284c7;
     }
     .exp-date {
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 700;
       color: #64748b;
       background: #f1f5f9;
@@ -152,12 +159,12 @@
     }
     ul {
       padding-left: 18px;
-      margin-top: 6px;
+      margin-top: 5px;
     }
     li {
-      font-size: 12.8px;
+      font-size: 12.5px;
       color: #334155;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       line-height: 1.55;
       text-align: justify;
     }
@@ -196,35 +203,35 @@
 
   <div class="page-container">
     <div class="header">
-      <h1>Mahmoud Abd El-Ghaffar (Mahmoud Zanaty)</h1>
-      <div class="title">AI Agent Architect & Workflow Automation Specialist | MicroMind Platform, LangChain & n8n Engineer</div>
+      <h1>MAHMOUD ABD EL-GHAFFAR (Mahmoud Zanaty)</h1>
+      <div class="title">AI Agent Architect & Enterprise Workflow Specialist | MicroMind, LangChain & n8n Engineer</div>
       <div class="contact-info">
         <span>📍 Benha / Cairo, Egypt</span>
         <span>📞 <a href="tel:+201024190741">+20 102 419 0741</a></span>
         <span>✉️ mahmoudzanaty454@gmail.com</span>
-        <span>🔗 <a href="https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/" target="_blank">LinkedIn Profile</a></span>
+      </div>
+      <div class="contact-links">
+        <span>🔗 LinkedIn: <a href="https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/" target="_blank">linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219</a></span>
+        <span>🌐 Portfolio: <a href="https://portfolio-mrt6.onrender.com/" target="_blank">https://portfolio-mrt6.onrender.com/</a></span>
       </div>
     </div>
 
-    <h2>Executive Summary</h2>
+    <h2>Professional Summary</h2>
     <p>
-      Accomplished <strong>Computer Engineer</strong> and <strong>AI Agent Architect</strong> with extensive hands-on experience designing, extending, and deploying autonomous AI agent networks, enterprise <strong>Pinecone</strong> RAG pipelines, and complex multi-platform automation ecosystems. Built and co-built <strong>30+ native integration nodes in AI MicroMind Core</strong> and engineered <strong>over 30+ production AI workflows</strong> bridging enterprise ERP systems (<strong>Oracle, Microsoft Dynamics, SAP, Odoo, Oracle Fusion, Dynamics 365 OData, SQL</strong>) with cutting-edge LLMs (<strong>OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, Google Gemini 2.0 Flash</strong>).
-    </p>
-    <p>
-      Architect of the <strong>AI MicroMind App</strong> featuring the <strong>Rebort Bot Framework</strong> and <strong>Advanced BI & Reporting Tools</strong>, empowering enterprise teams to query complex ERP database systems and cloud applications using conversational natural language. Experienced in full-stack mobile application development (front-end & back-end), constructing <strong>AI MicroMind MicroApps</strong> that integrate any third-party app into the MicroMind ecosystem, and developing custom integration apps across <strong>Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, Facebook Messenger, and WAPA (WhatsApp API)</strong>.
+      Accomplished <strong>Computer Engineer</strong> and <strong>AI Agent Architect</strong> with extensive expertise designing, scaling, and deploying autonomous AI agent networks, enterprise <strong>Pinecone</strong> RAG pipelines, and multi-platform automation ecosystems. Built and co-built <strong>30+ native integration nodes in AI MicroMind Core</strong> and engineered <strong>30+ production AI workflows</strong> connecting enterprise ERPs (<strong>Oracle, Microsoft Dynamics, SAP, Odoo, Oracle Fusion, Dynamics 365 OData, SQL</strong>) with advanced LLMs (<strong>GPT-4o, Claude 3.5 Sonnet, Gemini 2.0 Flash</strong>). Architect of the <strong>AI MicroMind App & Rebort Bot Conversational BI Framework</strong>, full-stack mobile applications, MicroMind MicroApps middleware, and custom integrations across 12+ enterprise platforms (<strong>Lark Suite, Bubble.io, Teamwork, ConnectWise, Zoom, Slack, WAPA</strong>). Proficient in <strong>Docker, AWS, Linux VPS, Render, and GitHub CI/CD</strong>.
     </p>
 
     <h2>Core Technical Competencies</h2>
-    <div class="skills-grid">
-      <div class="skill-box">⚡ <strong>Workflow & Agent Frameworks:</strong> MicroMind Platform (30+ Native Core Nodes), n8n, LangChain (Expert), LangGraph (Advanced), MCP, Webhooks</div>
-      <div class="skill-box">🤖 <strong>AI Development Acceleration:</strong> Google Antigravity, Claude Code, OpenAI Codex, VS Code AI Suite, GPT-4o, Gemini 2.0</div>
-      <div class="skill-box">📊 <strong>ERP & Database BI:</strong> Natural Language Queries over Oracle, Microsoft Dynamics, SAP, Odoo, Oracle Fusion, Dynamics 365 OData, SQL</div>
-      <div class="skill-box">🗄️ <strong>Databases & RAG:</strong> Pinecone Vector Database, PostgreSQL (LLM-to-SQL & Audit Logger), PGVector, OpenAI Embeddings</div>
-      <div class="skill-box">🔌 <strong>App Development & Integrations:</strong> Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, WAPA</div>
-      <div class="skill-box">🛠️ <strong>Hosting & DevOps:</strong> Docker, AWS, DigitalOcean, Linux VPS, Render, GitHub Actions & Version Control</div>
+    <div class="skills-list">
+      <div class="skill-row">• <strong>Agent & Workflow Frameworks:</strong> MicroMind Platform (30+ Native Core Nodes), n8n, LangChain (Expert), LangGraph (Advanced), Model Context Protocol (MCP), Webhooks, Schedulers</div>
+      <div class="skill-row">• <strong>Enterprise ERPs & Database BI:</strong> Conversational BI over Oracle ERP, Oracle Fusion, Dynamics 365 OData, SAP, Odoo, PostgreSQL, SQL Server, LLM-to-SQL</div>
+      <div class="skill-row">• <strong>Vector Databases & RAG:</strong> Pinecone Vector DB (Hybrid Dense+Sparse Search), OpenAI Embeddings, PGVector, Contextual Chunking & Retrieval</div>
+      <div class="skill-row">• <strong>Custom App Dev & Integrations:</strong> Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, WAPA (WhatsApp API)</div>
+      <div class="skill-row">• <strong>Mobile & Full-Stack Engineering:</strong> Full-Stack Mobile Applications (Front-End & Back-End), AI MicroMind MicroApps Middleware, Node.js, Python, REST APIs, WebSockets</div>
+      <div class="skill-row">• <strong>DevOps, Cloud & AI Acceleration:</strong> Docker, AWS, DigitalOcean Linux VPS, Render, GitHub CI/CD, Google Antigravity, Claude Code, OpenAI Codex</div>
     </div>
 
-    <h2>Technical Experience</h2>
+    <h2>Professional Experience</h2>
 
     <div class="exp-item">
       <div class="exp-header">
@@ -234,12 +241,12 @@
         <span class="exp-date">2024 – 2026</span>
       </div>
       <ul>
-        <li>Built and co-built <strong>30+ native integration nodes directly in AI MicroMind Core</strong> (Node.js runtime) for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI tools (<strong>Antigravity, Claude Code, Codex</strong>).</li>
-        <li>Architected and deployed the <strong>AI MicroMind App</strong> featuring the <strong>Rebort Bot Framework</strong> and <strong>Advanced BI & Reporting Tools</strong>. Enabled enterprise users to ask natural language questions directly to AI agents to extract live operational insights from on-premise ERPs (<strong>Oracle, Microsoft Dynamics, SAP, Odoo, SQL</strong>) and cloud platforms (<strong>Oracle Fusion, Dynamics 365 OData</strong>).</li>
-        <li>Engineered full-stack mobile applications (front-end & back-end) and built <strong>AI MicroMind MicroApps</strong>, creating modular bridges to integrate third-party applications seamlessly into the MicroMind ecosystem.</li>
-        <li>Developed custom integration applications and automated workflows across <strong>Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, Facebook Messenger, and WAPA</strong>.</li>
-        <li>Built complex multi-agent graphs using <strong>LangChain (Expert)</strong> and <strong>LangGraph (Advanced)</strong>, implementing Model Context Protocol (MCP) server dispatchers that execute Node.js backend scripts safely via Claude prompts.</li>
-        <li>Managed containerization, deployment, and cloud infrastructure across <strong>AWS, Docker, DigitalOcean, Linux VPS, Render, and GitHub</strong>.</li>
+        <li>Built and co-built <strong>30+ native integration nodes directly inside AI MicroMind Core</strong> (Node.js runtime) for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI coding tools (<strong>Antigravity, Claude Code, Codex</strong>).</li>
+        <li>Architected the <strong>AI MicroMind App</strong> featuring the <strong>Rebort Bot Framework</strong> and <strong>Advanced BI & Reporting Tools</strong>, enabling non-technical users to query on-premise ERPs (<strong>Oracle, SAP, Microsoft Dynamics, Odoo, SQL</strong>) and cloud platforms (<strong>Oracle Fusion, Dynamics 365 OData</strong>) via natural language.</li>
+        <li>Engineered full-stack mobile applications (frontend & backend) and constructed <strong>AI MicroMind MicroApps</strong>, establishing plug-and-play middleware to integrate third-party applications into the MicroMind ecosystem.</li>
+        <li>Developed custom integration applications and automated event pipelines across <strong>Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, Facebook Messenger, and WAPA</strong>.</li>
+        <li>Constructed multi-agent graph workflows using <strong>LangChain (Expert)</strong> and <strong>LangGraph (Advanced)</strong>, implementing Model Context Protocol (MCP) server dispatchers for safe backend script execution via Claude and GPT prompts.</li>
+        <li>Managed containerization, deployment, server monitoring, and continuous integration across <strong>AWS, Docker, DigitalOcean Linux VPS, Render, and GitHub Actions</strong>.</li>
       </ul>
     </div>
 
@@ -251,7 +258,7 @@
         <span class="exp-date">Jun 2021 – Jan 2022</span>
       </div>
       <ul>
-        <li>Analyzed cross-departmental operational cycles and engineered end-to-end automated workflows, eliminating manual data entry bottlenecks across IT operations teams.</li>
+        <li>Analyzed cross-departmental business workflows and engineered automated data synchronization pipelines, eliminating manual operational bottlenecks and accelerating cross-functional service delivery.</li>
       </ul>
     </div>
 
@@ -263,24 +270,23 @@
         <span class="exp-date">Jan 2020 – Jun 2021</span>
       </div>
       <ul>
-        <li>Managed IT infrastructure operations, monitored workflow execution logs, enforced SLA compliance, and administered operational tracking systems.</li>
+        <li>Administered IT infrastructure operations, monitored workflow execution logs, enforced strict SLA compliance, and resolved technical service tickets.</li>
       </ul>
     </div>
 
-    <h2>Detailed Project Architecture Highlights</h2>
+    <h2>Key Technical Architecture Projects</h2>
     <ul>
-      <li><strong>AI MicroMind App & Rebort Bot Framework:</strong> Conversational BI reporting engine over Oracle, SAP, Microsoft Dynamics, Odoo, and Dynamics 365 OData.</li>
-      <li><strong>AI MicroMind Core Node Architecture (30+ Built/Co-built Nodes):</strong> Native Node.js integrations for WAPA, Telegram, Gmail, Weather, MCP, Pinecone, Webhooks, and Schedulers.</li>
-      <li><strong>AI MicroMind MicroApps Ecosystem:</strong> Modular integration middleware linking any web or mobile app into the central AI agent network.</li>
-      <li><strong>Full-Stack Mobile Application Development:</strong> Mobile frontend and backend APIs linked to AI agent execution chains.</li>
-      <li><strong>Multi-Agent Graphs with LangChain (Expert) & LangGraph (Advanced):</strong> Hierarchical supervisor agents with memory state routing.</li>
-      <li><strong>Pinecone Enterprise RAG Architecture:</strong> High-speed semantic document retrieval with context verification safeguards.</li>
-      <li><strong>DevOps & Hosting Suite:</strong> Containerized environments deployed on AWS, Docker, DigitalOcean VPS, Render, and GitHub.</li>
+      <li>• <strong>AI MicroMind App & Rebort Bot Framework:</strong> Conversational BI reporting engine translating natural language prompts into live SQL/OData queries across Oracle, SAP, Dynamics 365, Odoo, and SQL databases.</li>
+      <li>• <strong>AI MicroMind Core Node Architecture (30+ Native Nodes):</strong> Custom Node.js native nodes extending core platform capabilities for WAPA, Telegram, Gmail, Weather, MCP, Pinecone, and Cron Schedulers.</li>
+      <li>• <strong>AI MicroMind MicroApps & Mobile Architecture:</strong> Modular middleware connecting cross-platform mobile apps and 12+ SaaS platforms (Lark, Bubble.io, Teamwork, ConnectWise, ClickUp, Zoom, Slack).</li>
+      <li>• <strong>Stateful Multi-Agent Graphs (LangChain & LangGraph):</strong> Hierarchical supervisor agent graphs featuring state persistence, conditional branching, and self-correcting prompt loops.</li>
+      <li>• <strong>Pinecone Enterprise RAG & Telemetry Suite:</strong> Hybrid dense/sparse semantic retrieval pipeline paired with PostgreSQL audit logging and LangSmith observability.</li>
+      <li>• <strong>Cloud DevOps & Containerization Suite:</strong> Multi-stage Dockerized environments deployed across AWS, DigitalOcean Linux VPS, and Render with automated CI/CD.</li>
     </ul>
 
     <h2>Education</h2>
     <p><strong>B.Sc. in Computer Engineering</strong> — Faculty of Engineering Shoubra, Benha University (Benha, Egypt)</p>
-    <p style="font-size: 12.5px; color: #64748b;">Specialization: Computer Systems Architecture, Database Management Systems, Software Engineering & AI Systems.</p>
+    <p style="font-size: 12px; color: #64748b;">Specialization: Computer Systems Architecture, Database Management Systems, Software Engineering & AI Systems.</p>
   </div>
 
 </body>

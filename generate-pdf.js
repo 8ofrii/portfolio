@@ -5,124 +5,169 @@ const path = require('path');
 function generateResumePDF(outputPath) {
   const doc = new PDFDocument({
     size: 'A4',
-    margin: 36
+    margin: 34,
+    compress: false,
+    info: {
+      Title: 'Mahmoud Abd El-Ghaffar - Resume',
+      Author: 'Mahmoud Abd El-Ghaffar',
+      Subject: 'AI Agent Architect & Enterprise Workflow Specialist Resume',
+      Keywords: 'AI Agent Architect, MicroMind Platform, LangChain, LangGraph, n8n, Pinecone, RAG, Rebort Bot, Oracle ERP, Microsoft Dynamics, SAP, Odoo, SQL, Docker, AWS, Python, Node.js'
+    }
   });
 
   const stream = fs.createWriteStream(outputPath);
   doc.pipe(stream);
 
-  // Colors
-  const primaryColor = '#0284c7';
-  const darkColor = '#0f172a';
-  const textColor = '#334155';
+  // Design Tokens (ATS-Optimized Palette)
+  const primaryColor = '#0284c7';      // Professional Sky Blue Accent
+  const darkColor = '#0f172a';         // Slate 900 for Headings
+  const bodyTextColor = '#334155';     // Slate 700 for Body
+  const mutedColor = '#64748b';        // Slate 500 for Dates/Subtitles
+  const ruleColor = '#cbd5e1';         // Slate 300 for Dividers
 
-  // Header
-  doc.fillColor(darkColor).fontSize(21).font('Helvetica-Bold').text('Mahmoud Abd El-Ghaffar (Mahmoud Zanaty)', { align: 'left' });
-  doc.moveDown(0.2);
-  doc.fillColor(primaryColor).fontSize(11.5).font('Helvetica-Bold').text('AI Agent Architect & Workflow Automation Specialist | MicroMind Platform, LangChain & n8n Engineer');
-  doc.moveDown(0.3);
-  doc.fillColor(textColor).fontSize(9).font('Helvetica').text('Location: Benha / Cairo, Egypt  |  Phone: +20 102 419 0741  |  Email: mahmoudzanaty454@gmail.com');
-  doc.fillColor(primaryColor).fontSize(9).font('Helvetica-Bold').text('LinkedIn: https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/');
-  doc.moveDown(0.6);
+  // Page Width calculation
+  const pageWidth = 595.28;
+  const margin = 34;
+  const contentWidth = pageWidth - (margin * 2); // 527.28 pt
 
-  // Divider Line
-  doc.strokeColor('#0284c7').lineWidth(1.5).moveTo(36, doc.y).lineTo(559, doc.y).stroke();
-  doc.moveDown(0.5);
+  // ==========================================
+  // 1. HEADER SECTION
+  // ==========================================
+  doc.fillColor(darkColor).fontSize(20).font('Helvetica-Bold').text('MAHMOUD ABD EL-GHAFFAR', { align: 'left' });
+  doc.moveDown(0.15);
+  doc.fillColor(primaryColor).fontSize(10.5).font('Helvetica-Bold').text('AI Agent Architect & Enterprise Workflow Specialist  |  MicroMind, LangChain & n8n Engineer');
+  doc.moveDown(0.25);
+
+  // Contact line 1: Location, Phone, Email
+  doc.fillColor(bodyTextColor).fontSize(8.5).font('Helvetica');
+  doc.text('Location: Benha / Cairo, Egypt   •   Phone / WhatsApp: +20 102 419 0741   •   Email: mahmoudzanaty454@gmail.com');
+  
+  // Contact line 2: LinkedIn & Portfolio (with clickable links)
+  doc.moveDown(0.15);
+  const linkY = doc.y;
+  doc.fillColor(primaryColor).font('Helvetica-Bold');
+  doc.text('LinkedIn: linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219', margin, linkY, {
+    link: 'https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/',
+    continued: true
+  });
+  doc.fillColor(mutedColor).font('Helvetica').text('   •   ', { continued: true });
+  doc.fillColor(primaryColor).font('Helvetica-Bold').text('Portfolio: https://portfolio-mrt6.onrender.com/', {
+    link: 'https://portfolio-mrt6.onrender.com/'
+  });
+
+  doc.moveDown(0.4);
+  // Header Accent Rule
+  doc.strokeColor(primaryColor).lineWidth(1.2).moveTo(margin, doc.y).lineTo(pageWidth - margin, doc.y).stroke();
+  doc.moveDown(0.35);
 
   // Section Heading Helper
   function addSectionHeader(title) {
-    doc.fillColor(darkColor).fontSize(11.5).font('Helvetica-Bold').text(title.toUpperCase());
-    doc.strokeColor('#cbd5e1').lineWidth(0.8).moveTo(36, doc.y + 2).lineTo(559, doc.y + 2).stroke();
-    doc.moveDown(0.4);
+    doc.fillColor(darkColor).fontSize(10.5).font('Helvetica-Bold').text(title.toUpperCase());
+    doc.strokeColor(ruleColor).lineWidth(0.6).moveTo(margin, doc.y + 1.5).lineTo(pageWidth - margin, doc.y + 1.5).stroke();
+    doc.moveDown(0.3);
   }
 
-  // Executive Summary
-  addSectionHeader('Executive Summary');
-  doc.fillColor(textColor).fontSize(9).font('Helvetica').text(
-    'Accomplished Computer Engineer and AI Agent Architect with extensive hands-on experience designing, extending, and deploying autonomous AI agent networks, enterprise Pinecone RAG pipelines, and complex multi-platform automation ecosystems. Built and co-built 30+ native integration nodes in AI MicroMind Core and engineered over 30+ production AI workflows bridging enterprise ERP systems (Oracle, Microsoft Dynamics, SAP, Odoo, Oracle Fusion, Dynamics 365 OData, SQL) with cutting-edge LLMs (OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, Google Gemini 2.0 Flash).',
-    { align: 'justify', lineGap: 2 }
+  // ==========================================
+  // 2. PROFESSIONAL SUMMARY
+  // ==========================================
+  addSectionHeader('Professional Summary');
+  doc.fillColor(bodyTextColor).fontSize(8.4).font('Helvetica').text(
+    'Accomplished Computer Engineer and AI Agent Architect with extensive expertise designing, scaling, and deploying autonomous AI agent networks, enterprise Pinecone RAG pipelines, and multi-platform automation ecosystems. Built and co-built 30+ native integration nodes in AI MicroMind Core and engineered 30+ production AI workflows connecting enterprise ERPs (Oracle, Microsoft Dynamics, SAP, Odoo, Oracle Fusion, Dynamics 365 OData, SQL) with advanced LLMs (GPT-4o, Claude 3.5 Sonnet, Gemini 2.0 Flash). Architect of the AI MicroMind App & Rebort Bot Conversational BI Framework, full-stack mobile applications, MicroMind MicroApps middleware, and custom integrations across 12+ enterprise platforms (Lark Suite, Bubble.io, Teamwork, ConnectWise, Zoom, Slack, WAPA). Proficient in Docker, AWS, Linux VPS, Render, and GitHub CI/CD.',
+    { align: 'justify', lineGap: 1.6 }
   );
-  doc.moveDown(0.3);
-  doc.fillColor(textColor).fontSize(9).font('Helvetica').text(
-    'Architect of the AI MicroMind App featuring the Rebort Bot Framework and Advanced BI & Reporting Tools, empowering enterprise teams to query complex ERP database systems and cloud applications using conversational natural language. Experienced in full-stack mobile application development (front-end & back-end), constructing AI MicroMind MicroApps that integrate any third-party app into the MicroMind ecosystem, and developing custom integration apps across Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, Facebook Messenger, and WAPA (WhatsApp API).',
-    { align: 'justify', lineGap: 2 }
-  );
-  doc.moveDown(0.6);
+  doc.moveDown(0.4);
 
-  // Core Technical Competencies
+  // ==========================================
+  // 3. CORE TECHNICAL COMPETENCIES
+  // ==========================================
   addSectionHeader('Core Technical Competencies');
   const skills = [
-    '• Workflow & Agent Frameworks: MicroMind Platform (30+ Native Core Nodes), n8n, LangChain (Expert), LangGraph (Advanced), MCP, Webhooks',
-    '• AI Coding Acceleration: Google Antigravity, Claude Code, OpenAI Codex, VS Code AI Suite, GPT-4o, Gemini 2.0 Flash',
-    '• ERP & Enterprise Data Systems: Natural Language BI Queries over Oracle, Microsoft Dynamics, SAP, Odoo, Oracle Fusion, Dynamics 365 OData, SQL',
-    '• Databases & Vector Search: Pinecone Vector Database, PostgreSQL (LLM-to-SQL & Audit Logger), PGVector, OpenAI Embeddings',
-    '• Custom App Dev & Integrations: Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, WAPA',
-    '• Hosting & Light DevOps: Docker, AWS, DigitalOcean, Linux VPS Administration, Render, GitHub Actions & Version Control'
+    { label: 'Agent & Workflow Frameworks:', text: 'MicroMind Platform (30+ Native Core Nodes), n8n, LangChain (Expert), LangGraph (Advanced), MCP, Webhooks, Schedulers' },
+    { label: 'Enterprise ERPs & Database BI:', text: 'Conversational BI over Oracle ERP, Oracle Fusion, Dynamics 365 OData, SAP, Odoo, PostgreSQL, SQL Server, LLM-to-SQL' },
+    { label: 'Vector Databases & RAG:', text: 'Pinecone Vector DB (Hybrid Dense+Sparse Search), OpenAI Embeddings, PGVector, Contextual Chunking & Retrieval' },
+    { label: 'Custom App Dev & Integrations:', text: 'Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, WAPA (WhatsApp API)' },
+    { label: 'Mobile & Full-Stack Engineering:', text: 'Full-Stack Mobile Applications (Front-End & Back-End), AI MicroMind MicroApps Middleware, Node.js, Python, REST, WebSockets' },
+    { label: 'DevOps, Cloud & AI Acceleration:', text: 'Docker, AWS, DigitalOcean Linux VPS, Render, GitHub CI/CD, Google Antigravity, Claude Code, OpenAI Codex' }
   ];
-  skills.forEach(skill => {
-    doc.fillColor(textColor).fontSize(8.8).font('Helvetica').text(skill, { lineGap: 1.8 });
+
+  skills.forEach(s => {
+    doc.fillColor(darkColor).fontSize(8.2).font('Helvetica-Bold').text(`• ${s.label} `, { continued: true });
+    doc.fillColor(bodyTextColor).font('Helvetica').text(s.text, { lineGap: 1.4 });
   });
-  doc.moveDown(0.6);
+  doc.moveDown(0.4);
 
-  // Technical Experience
-  addSectionHeader('Technical Work Experience');
+  // ==========================================
+  // 4. PROFESSIONAL EXPERIENCE
+  // ==========================================
+  addSectionHeader('Professional Experience');
 
-  // AI MicroMind
-  doc.fillColor(darkColor).fontSize(10.5).font('Helvetica-Bold').text('AI & Automation Engineer — AI MicroMind', { continued: true });
-  doc.fillColor(primaryColor).fontSize(9).font('Helvetica-Bold').text('   (2024 – 2026)', { align: 'right' });
-  doc.moveDown(0.3);
+  // Role 1: AI MicroMind
+  doc.fillColor(darkColor).fontSize(9.5).font('Helvetica-Bold').text('AI & Automation Engineer', { continued: true });
+  doc.fillColor(primaryColor).font('Helvetica-Bold').text(' — AI MicroMind', { continued: true });
+  doc.fillColor(mutedColor).fontSize(8.5).font('Helvetica-Bold').text('   (2024 – 2026)', { align: 'right' });
+  doc.moveDown(0.2);
+
   const expMicroMind = [
-    'Built and co-built 30+ native integration nodes directly in AI MicroMind Core for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI tools (Antigravity, Claude Code, Codex).',
-    'Architected and deployed the AI MicroMind App featuring the Rebort Bot Framework and Advanced BI & Reporting Tools. Enabled enterprise users to ask natural language questions directly to AI agents to extract live operational insights from on-premise ERPs (Oracle, Microsoft Dynamics, SAP, Odoo, SQL) and cloud platforms (Oracle Fusion, Dynamics 365 OData).',
-    'Engineered full-stack mobile applications (front-end & back-end) and built AI MicroMind MicroApps, creating modular bridges to integrate third-party applications seamlessly into the MicroMind ecosystem.',
-    'Developed custom integration applications and automated workflows across Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, Facebook Messenger, and WAPA.',
-    'Built complex multi-agent graphs using LangChain (Expert) and LangGraph (Advanced), implementing Model Context Protocol (MCP) server dispatchers that execute Node.js backend scripts safely via Claude prompts.',
-    'Managed containerization, deployment, and cloud infrastructure across AWS, Docker, DigitalOcean, Linux VPS, Render, and GitHub.'
+    'Built and co-built 30+ native integration nodes directly inside AI MicroMind Core (Node.js runtime) for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI coding tools (Antigravity, Claude Code, Codex).',
+    'Architected the AI MicroMind App featuring the Rebort Bot Framework and Advanced BI & Reporting Tools, enabling non-technical users to query on-premise ERPs (Oracle, SAP, Microsoft Dynamics, Odoo, SQL) and cloud platforms (Oracle Fusion, Dynamics 365 OData) via natural language.',
+    'Engineered full-stack mobile applications (frontend & backend) and constructed AI MicroMind MicroApps, establishing plug-and-play middleware to integrate third-party applications into the MicroMind ecosystem.',
+    'Developed custom integration applications and automated event pipelines across Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, Facebook Messenger, and WAPA.',
+    'Constructed multi-agent graph workflows using LangChain (Expert) and LangGraph (Advanced), implementing Model Context Protocol (MCP) server dispatchers for safe backend script execution via Claude and GPT prompts.',
+    'Managed containerization, deployment, server monitoring, and continuous integration across AWS, Docker, DigitalOcean Linux VPS, Render, and GitHub Actions.'
   ];
   expMicroMind.forEach(bullet => {
-    doc.fillColor(textColor).fontSize(8.6).font('Helvetica').text(`  •  ${bullet}`, { lineGap: 1.8 });
+    doc.fillColor(bodyTextColor).fontSize(8.1).font('Helvetica').text(`•  ${bullet}`, { align: 'justify', lineGap: 1.4 });
   });
-  doc.moveDown(0.5);
+  doc.moveDown(0.35);
 
-  // Operatives Automation
-  doc.fillColor(darkColor).fontSize(10.5).font('Helvetica-Bold').text('Automation Engineer — Operatives (IT Services)', { continued: true });
-  doc.fillColor(primaryColor).fontSize(9).font('Helvetica-Bold').text('   (Jun 2021 – Jan 2022)', { align: 'right' });
-  doc.moveDown(0.2);
-  doc.fillColor(textColor).fontSize(8.6).font('Helvetica').text('  •  Analyzed cross-departmental operational cycles and engineered end-to-end automated workflows, eliminating manual data entry bottlenecks across IT operations teams.', { lineGap: 1.8 });
-  doc.moveDown(0.5);
+  // Role 2: Operatives Automation
+  doc.fillColor(darkColor).fontSize(9.5).font('Helvetica-Bold').text('Automation Engineer', { continued: true });
+  doc.fillColor(primaryColor).font('Helvetica-Bold').text(' — Operatives (IT Services)', { continued: true });
+  doc.fillColor(mutedColor).fontSize(8.5).font('Helvetica-Bold').text('   (Jun 2021 – Jan 2022)', { align: 'right' });
+  doc.moveDown(0.15);
+  doc.fillColor(bodyTextColor).fontSize(8.1).font('Helvetica').text('•  Analyzed cross-departmental business workflows and engineered automated data synchronization pipelines, eliminating manual operational bottlenecks and accelerating cross-functional service delivery.', { align: 'justify', lineGap: 1.4 });
+  doc.moveDown(0.35);
 
-  // Operatives Admin
-  doc.fillColor(darkColor).fontSize(10.5).font('Helvetica-Bold').text('Operation Engineer & Admin — Operatives (IT Services)', { continued: true });
-  doc.fillColor(primaryColor).fontSize(9).font('Helvetica-Bold').text('   (Jan 2020 – Jun 2021)', { align: 'right' });
-  doc.moveDown(0.2);
-  doc.fillColor(textColor).fontSize(8.6).font('Helvetica').text('  •  Managed IT infrastructure operations, monitored workflow execution logs, enforced SLA compliance, and administered operational tracking systems.', { lineGap: 1.8 });
-  doc.moveDown(0.6);
+  // Role 3: Operatives Admin
+  doc.fillColor(darkColor).fontSize(9.5).font('Helvetica-Bold').text('Operation Engineer & Admin', { continued: true });
+  doc.fillColor(primaryColor).font('Helvetica-Bold').text(' — Operatives (IT Services)', { continued: true });
+  doc.fillColor(mutedColor).fontSize(8.5).font('Helvetica-Bold').text('   (Jan 2020 – Jun 2021)', { align: 'right' });
+  doc.moveDown(0.15);
+  doc.fillColor(bodyTextColor).fontSize(8.1).font('Helvetica').text('•  Administered IT infrastructure operations, monitored workflow execution logs, enforced strict SLA compliance, and resolved technical service tickets.', { align: 'justify', lineGap: 1.4 });
+  doc.moveDown(0.4);
 
-  // Key Project Architecture Highlights
-  addSectionHeader('Detailed Project Architecture Highlights');
+  // ==========================================
+  // 5. KEY TECHNICAL ARCHITECTURE PROJECTS
+  // ==========================================
+  addSectionHeader('Key Technical Architecture Projects');
   const projectHighlights = [
-    '• AI MicroMind App & Rebort Bot Framework: Conversational BI reporting engine over Oracle, SAP, Microsoft Dynamics, Odoo, and Dynamics 365 OData.',
-    '• AI MicroMind Core Node Architecture (30+ Built/Co-built Nodes): Native Node.js integrations for WAPA, Telegram, Gmail, Weather, MCP, Pinecone, Webhooks, and Schedulers.',
-    '• AI MicroMind MicroApps Ecosystem: Modular integration middleware linking any web or mobile app into the central AI agent network.',
-    '• Full-Stack Mobile Application Development: Mobile frontend and backend APIs linked to AI agent execution chains.',
-    '• Multi-Agent Graphs with LangChain (Expert) & LangGraph (Advanced): Hierarchical supervisor agents with memory state routing.',
-    '• Pinecone Enterprise RAG Architecture: High-speed semantic document retrieval with context verification safeguards.',
-    '• DevOps & Hosting Suite: Containerized environments deployed on AWS, Docker, DigitalOcean VPS, Render, and GitHub.'
+    { title: 'AI MicroMind App & Rebort Bot Framework:', desc: 'Conversational BI reporting engine translating natural language prompts into live SQL/OData queries across Oracle, SAP, Dynamics 365, Odoo, and SQL databases.' },
+    { title: 'AI MicroMind Core Node Architecture (30+ Native Nodes):', desc: 'Custom Node.js native nodes extending core platform capabilities for WAPA, Telegram, Gmail, Weather, MCP, Pinecone, and Cron Schedulers.' },
+    { title: 'AI MicroMind MicroApps & Mobile Architecture:', desc: 'Modular middleware connecting cross-platform mobile apps and 12+ SaaS platforms (Lark, Bubble.io, Teamwork, ConnectWise, ClickUp, Zoom, Slack).' },
+    { title: 'Stateful Multi-Agent Graphs (LangChain & LangGraph):', desc: 'Hierarchical supervisor agent graphs featuring state persistence, conditional branching, and self-correcting prompt loops.' },
+    { title: 'Pinecone Enterprise RAG & Telemetry Suite:', desc: 'Hybrid dense/sparse semantic retrieval pipeline paired with PostgreSQL audit logging and LangSmith observability.' },
+    { title: 'Cloud DevOps & Containerization Suite:', desc: 'Multi-stage Dockerized environments deployed across AWS, DigitalOcean Linux VPS, and Render with automated CI/CD.' }
   ];
   projectHighlights.forEach(proj => {
-    doc.fillColor(textColor).fontSize(8.6).font('Helvetica').text(proj, { lineGap: 1.8 });
+    doc.fillColor(darkColor).fontSize(8.1).font('Helvetica-Bold').text(`• ${proj.title} `, { continued: true });
+    doc.fillColor(bodyTextColor).font('Helvetica').text(proj.desc, { align: 'justify', lineGap: 1.3 });
   });
-  doc.moveDown(0.6);
+  doc.moveDown(0.4);
 
-  // Education
+  // ==========================================
+  // 6. EDUCATION
+  // ==========================================
   addSectionHeader('Education');
-  doc.fillColor(darkColor).fontSize(10).font('Helvetica-Bold').text('B.Sc. in Computer Engineering — Faculty of Engineering Shoubra, Benha University');
-  doc.fillColor(textColor).fontSize(8.6).font('Helvetica').text('Location: Benha, Egypt | Specialization: Computer Systems Architecture, Database Management Systems, Software Engineering & AI Systems.');
+  doc.fillColor(darkColor).fontSize(9).font('Helvetica-Bold').text('B.Sc. in Computer Engineering', { continued: true });
+  doc.fillColor(primaryColor).font('Helvetica-Bold').text(' — Faculty of Engineering Shoubra, Benha University', { continued: true });
+  doc.fillColor(mutedColor).fontSize(8.5).font('Helvetica').text('   (Benha, Egypt)', { align: 'right' });
+  doc.moveDown(0.1);
+  doc.fillColor(bodyTextColor).fontSize(8).font('Helvetica').text('Specialization: Computer Systems Architecture, Database Management Systems, Software Engineering & AI Systems.');
 
   doc.end();
 
   stream.on('finish', () => {
-    console.log(`Successfully generated updated PDF resume at: ${outputPath}`);
+    console.log(`Successfully generated ATS-compliant PDF resume at: ${outputPath}`);
   });
 }
 

@@ -303,36 +303,52 @@ function openResumeModal() {
 
   content.innerHTML = `
     <div class="resume-rendered">
-      <h1>Mahmoud Abd El-Ghaffar (Mahmoud Zanaty)</h1>
-      <p style="color: var(--primary-cyan); font-weight: 700; margin-bottom: 12px;">
-        AI Agent Architect & Workflow Automation Specialist | MicroMind Platform, LangChain & n8n Engineer
+      <h1>MAHMOUD ABD EL-GHAFFAR (Mahmoud Zanaty)</h1>
+      <p style="color: var(--primary-cyan); font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">
+        AI Agent Architect & Enterprise Workflow Specialist | MicroMind, LangChain & n8n Engineer
       </p>
-      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
-        📍 Benha / Cairo, Egypt | 📞 <a href="tel:+201024190741" style="color: var(--primary-cyan);">+20 102 419 0741</a> | ✉️ mahmoudzanaty454@gmail.com | 🔗 <a href="https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/" target="_blank" style="color: var(--primary-cyan);">LinkedIn Profile</a>
-      </p>
+      <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 14px;">
+        <span>📍 Benha / Cairo, Egypt</span>
+        <span>📞 <a href="tel:+201024190741" style="color: var(--primary-cyan);">+20 102 419 0741</a></span>
+        <span>✉️ mahmoudzanaty454@gmail.com</span>
+      </div>
+      <div style="font-size: 0.9rem; margin-bottom: 18px; display: flex; flex-wrap: wrap; gap: 16px;">
+        <span>🔗 LinkedIn: <a href="https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/" target="_blank" style="color: var(--primary-cyan); font-weight: 600;">linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219</a></span>
+        <span>🌐 Portfolio: <a href="https://portfolio-mrt6.onrender.com/" target="_blank" style="color: var(--primary-cyan); font-weight: 600;">https://portfolio-mrt6.onrender.com/</a></span>
+      </div>
 
-      <h2>Executive Summary</h2>
-      <p>Accomplished Computer Engineer and AI Agent Architect with extensive hands-on experience designing, extending, and deploying autonomous AI agent networks, enterprise Pinecone RAG pipelines, and complex multi-platform automation ecosystems. Built and co-built 30+ native integration nodes in AI MicroMind Core and engineered over 30+ production AI workflows bridging enterprise ERP systems (Oracle, Microsoft Dynamics, SAP, Odoo, Oracle Fusion, Dynamics 365 OData, SQL) with cutting-edge LLMs (OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, Google Gemini 2.0 Flash).</p>
+      <h2>Professional Summary</h2>
+      <p>Accomplished Computer Engineer and AI Agent Architect with extensive expertise designing, scaling, and deploying autonomous AI agent networks, enterprise Pinecone RAG pipelines, and multi-platform automation ecosystems. Built and co-built 30+ native integration nodes in AI MicroMind Core and engineered 30+ production AI workflows connecting enterprise ERPs (Oracle, Microsoft Dynamics, SAP, Odoo, Oracle Fusion, Dynamics 365 OData, SQL) with advanced LLMs (GPT-4o, Claude 3.5 Sonnet, Gemini 2.0 Flash). Architect of the AI MicroMind App & Rebort Bot Conversational BI Framework, full-stack mobile applications, MicroMind MicroApps middleware, and custom integrations across 12+ enterprise platforms (Lark Suite, Bubble.io, Teamwork, ConnectWise, Zoom, Slack, WAPA). Proficient in Docker, AWS, Linux VPS, Render, and GitHub CI/CD.</p>
 
-      <h2>Work Experience</h2>
+      <h2>Core Technical Competencies</h2>
+      <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 18px;">
+        <li><strong style="color: var(--text-main);">Agent & Workflow Frameworks:</strong> MicroMind Platform (30+ Native Core Nodes), n8n, LangChain (Expert), LangGraph (Advanced), MCP, Webhooks, Schedulers</li>
+        <li><strong style="color: var(--text-main);">Enterprise ERPs & Database BI:</strong> Conversational BI over Oracle ERP, Oracle Fusion, Dynamics 365 OData, SAP, Odoo, PostgreSQL, SQL Server, LLM-to-SQL</li>
+        <li><strong style="color: var(--text-main);">Vector Databases & RAG:</strong> Pinecone Vector DB (Hybrid Dense+Sparse Search), OpenAI Embeddings, PGVector, Contextual Chunking & Retrieval</li>
+        <li><strong style="color: var(--text-main);">Custom App Dev & Integrations:</strong> Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, WAPA</li>
+        <li><strong style="color: var(--text-main);">Mobile & Full-Stack Engineering:</strong> Full-Stack Mobile Applications, AI MicroMind MicroApps Middleware, Node.js, Python, REST APIs, WebSockets</li>
+        <li><strong style="color: var(--text-main);">DevOps, Cloud & AI Acceleration:</strong> Docker, AWS, DigitalOcean Linux VPS, Render, GitHub CI/CD, Google Antigravity, Claude Code, Codex</li>
+      </ul>
+
+      <h2>Professional Experience</h2>
       <h3 style="color: var(--text-main);">AI & Automation Engineer — AI MicroMind <span style="font-size: 0.85rem; color: var(--primary-cyan); font-weight: normal;">(2024 – 2026)</span></h3>
-      <ul>
-        <li>Built and co-built 30+ native integration nodes directly in AI MicroMind Core for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI tools (Antigravity, Claude Code, Codex).</li>
-        <li>Architected and deployed the AI MicroMind App featuring the Rebort Bot Framework and Advanced BI & Reporting Tools for querying on-premise ERPs (Oracle, Microsoft Dynamics, SAP, Odoo, SQL) and cloud platforms (Oracle Fusion, Dynamics 365 OData).</li>
-        <li>Engineered full-stack mobile applications (front-end & back-end) and built AI MicroMind MicroApps connecting any third-party app into the MicroMind ecosystem.</li>
-        <li>Developed custom integration applications across Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, Facebook Messenger, and WAPA.</li>
-        <li>Built complex multi-agent graphs using LangChain (Expert) and LangGraph (Advanced), implementing MCP server dispatchers.</li>
-        <li>Managed Docker, AWS, DigitalOcean VPS, Linux Administration, Render, and GitHub CI/CD pipelines.</li>
+      <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
+        <li>Built and co-built 30+ native integration nodes directly inside AI MicroMind Core (Node.js runtime) for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI coding tools (Antigravity, Claude Code, Codex).</li>
+        <li>Architected the AI MicroMind App featuring the Rebort Bot Framework and Advanced BI & Reporting Tools, enabling non-technical users to query on-premise ERPs (Oracle, SAP, Microsoft Dynamics, Odoo, SQL) and cloud platforms (Oracle Fusion, Dynamics 365 OData) via natural language.</li>
+        <li>Engineered full-stack mobile applications (frontend & backend) and constructed AI MicroMind MicroApps, establishing plug-and-play middleware to integrate third-party applications into the MicroMind ecosystem.</li>
+        <li>Developed custom integration applications and automated event pipelines across Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, Facebook Messenger, and WAPA.</li>
+        <li>Constructed multi-agent graph workflows using LangChain (Expert) and LangGraph (Advanced), implementing Model Context Protocol (MCP) server dispatchers for safe backend script execution via Claude and GPT prompts.</li>
+        <li>Managed containerization, deployment, server monitoring, and continuous integration across AWS, Docker, DigitalOcean Linux VPS, Render, and GitHub Actions.</li>
       </ul>
 
       <h3 style="color: var(--text-main); margin-top: 18px;">Automation Engineer — Operatives (IT Services) <span style="font-size: 0.85rem; color: var(--primary-cyan); font-weight: normal;">(Jun 2021 – Jan 2022)</span></h3>
-      <ul>
-        <li>Automated cross-departmental operational cycles, eliminating manual data entry bottlenecks across IT operations teams.</li>
+      <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
+        <li>Analyzed cross-departmental business workflows and engineered automated data synchronization pipelines, eliminating manual operational bottlenecks and accelerating cross-functional service delivery.</li>
       </ul>
 
       <h3 style="color: var(--text-main); margin-top: 18px;">Operation Engineer & Admin — Operatives (IT Services) <span style="font-size: 0.85rem; color: var(--primary-cyan); font-weight: normal;">(Jan 2020 – Jun 2021)</span></h3>
-      <ul>
-        <li>Managed IT infrastructure operations, monitored workflow execution logs, enforced SLA compliance, and administered operational tracking systems.</li>
+      <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
+        <li>Administered IT infrastructure operations, monitored workflow execution logs, enforced strict SLA compliance, and resolved technical service tickets.</li>
       </ul>
     </div>
   `;

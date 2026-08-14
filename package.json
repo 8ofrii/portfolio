@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "pdf-parse": "^1.1.1",
     "pdfkit": "^0.19.1"
   }
 }
