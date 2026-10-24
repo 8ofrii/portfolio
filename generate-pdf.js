@@ -114,7 +114,7 @@ function generateResumePDF(outputPath) {
   // Role 1: AI MicroMind
   doc.fillColor(darkColor).fontSize(9.2).font('Helvetica-Bold').text('AI & Automation Engineer', { continued: true });
   doc.fillColor(primaryColor).font('Helvetica-Bold').text(' — AI MicroMind', { continued: true });
-  doc.fillColor(mutedColor).fontSize(8.2).font('Helvetica-Bold').text('   (2024 – 2026)', { align: 'right' });
+  doc.fillColor(mutedColor).fontSize(8.2).font('Helvetica-Bold').text('   (2024 – Present)', { align: 'right' });
   doc.moveDown(0.18);
 
   const expMicroMind = [

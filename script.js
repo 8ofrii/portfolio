@@ -106,23 +106,23 @@ const projectsData = [
     }
   },
   {
-    id: "mobile-apps-architecture",
-    title: "Full-Stack Mobile Applications & MicroMind Clients",
-    subtitle: "Cross-Platform Mobile AI Assistants & Field Tools",
+    id: "business-automation-pipelines",
+    title: "End-to-End Business Automation Pipelines",
+    subtitle: "Automated Workflows across Make, Zapier, n8n, CRMs & Forms",
     category: "arch",
-    categoryLabel: "Architecture & System Design",
-    icon: "fa-solid fa-mobile-screen",
-    desc: "Engineered full-stack mobile applications (front-end & back-end) providing mobile workforce teams with real-time conversational access to MicroMind agents and ERP metrics.",
-    techStack: ["Mobile App Dev", "React Native / Flutter", "Node.js APIs", "WebSockets", "Push Notifications", "OAuth 2.0"],
+    categoryLabel: "Workflows & Automations",
+    icon: "fa-solid fa-bolt",
+    desc: "Engineered multi-platform production automations connecting lead capture forms (Typeform, Jotform), CRMs (HubSpot, Airtable), email sequences, and team messaging (Slack, Gmail) with built-in error handling and zero data loss.",
+    techStack: ["Make (Integromat)", "Zapier", "n8n", "HubSpot CRM", "Airtable", "Webhooks", "Slack API", "Gmail API"],
     details: {
-      overview: "Native and cross-platform mobile solutions connecting field operations directly to core AI workflows and ERP intelligence.",
+      overview: "Reliable, self-healing business automation workflows synchronizing operational data across client sales, marketing, and onboarding pipelines.",
       architecture: [
-        "Real-time WebSocket streaming for fluid token-by-token conversational AI responses on mobile screens.",
-        "Offline caching and sync queue for operations in remote or low-bandwidth environments.",
-        "Biometric authentication and secure local token storage for enterprise data safety.",
-        "Voice-to-text integration enabling hands-free field reporting and query execution."
+        "Automated webhook ingestion from Typeform and Jotform with instant payload validation.",
+        "Bidirectional lead enrichment and lifecycle synchronization between HubSpot CRM and Airtable databases.",
+        "Conditional branching for automated VIP client routing and instant Slack alerts.",
+        "Automated error-handling loops, webhook retry mechanisms, and fail-safe alerting preventing data loss."
       ],
-      impact: "Empowered 100+ field operators to query live database metrics directly from mobile devices."
+      impact: "Eliminated 15+ weekly hours of repetitive manual data entry with 99.9% uptime and zero lost leads."
     }
   },
   {
@@ -331,7 +331,7 @@ function openResumeModal() {
       </ul>
 
       <h2>Professional Experience</h2>
-      <h3 style="color: var(--text-main);">AI & Automation Engineer — AI MicroMind <span style="font-size: 0.85rem; color: var(--primary-cyan); font-weight: normal;">(2024 – 2026)</span></h3>
+      <h3 style="color: var(--text-main);">AI & Automation Engineer — AI MicroMind <span style="font-size: 0.85rem; color: var(--primary-cyan); font-weight: normal;">(2024 – Present)</span></h3>
       <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
         <li>Built and co-built <strong>30+ native integration nodes directly inside AI MicroMind Core</strong> (Node.js runtime) for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI coding tools (<strong>Antigravity, Claude Code, Codex</strong>).</li>
         <li>Designed multi-step business automations across <strong>Zapier, Make, and n8n</strong> connecting CRMs (HubSpot, Airtable), web forms, and messaging tools, eliminating manual data entry and accelerating client operational pipelines.</li>
