@@ -49,8 +49,8 @@ const projectsData = [
     id: "microapps-ecosystem",
     title: "AI MicroMind MicroApps & Integrations",
     subtitle: "Modular Middleware Layer for 12+ Enterprise SaaS Tools",
-    category: "nodes-mcp",
-    categoryLabel: "Custom Nodes & MCP",
+    category: "integrations",
+    categoryLabel: "SaaS & App Integrations",
     icon: "fa-solid fa-cubes",
     desc: "Constructed AI MicroMind MicroApps to seamlessly bridge external tools (Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, WAPA) with the central agent network.",
     techStack: ["MicroApps Layer", "Lark Suite", "Bubble.io", "Teamwork", "ConnectWise", "ClickUp", "Zoom", "Slack", "WAPA"],
@@ -109,8 +109,8 @@ const projectsData = [
     id: "business-automation-pipelines",
     title: "End-to-End Business Automation Pipelines",
     subtitle: "Automated Workflows across Make, Zapier, n8n, CRMs & Forms",
-    category: "arch",
-    categoryLabel: "Workflows & Automations",
+    category: "integrations",
+    categoryLabel: "Business Integrations",
     icon: "fa-solid fa-bolt",
     desc: "Engineered multi-platform production automations connecting lead capture forms (Typeform, Jotform), CRMs (HubSpot, Airtable), email sequences, and team messaging (Slack, Gmail) with built-in error handling and zero data loss.",
     techStack: ["Make (Integromat)", "Zapier", "n8n", "HubSpot CRM", "Airtable", "Webhooks", "Slack API", "Gmail API"],
@@ -197,7 +197,9 @@ function renderProjects() {
   if (!container) return;
 
   const filtered = projectsData.filter(p => {
-    const matchesCategory = currentFilter === 'all' || p.category === currentFilter;
+    const matchesCategory = currentFilter === 'all' || 
+      p.category === currentFilter ||
+      (currentFilter === 'integrations' && (p.category === 'integrations' || p.id === 'micromind-core-nodes'));
     const matchesSearch = !currentSearch || 
       p.title.toLowerCase().includes(currentSearch) ||
       p.desc.toLowerCase().includes(currentSearch) ||
@@ -210,7 +212,7 @@ function renderProjects() {
       <div style="grid-column: 1 / -1; text-align: center; padding: 40px 20px; background: rgba(255,255,255,0.02); border-radius: 16px; border: 1px solid var(--border-color);">
         <i class="fa-solid fa-search" style="font-size: 2rem; color: var(--text-dim); margin-bottom: 12px;"></i>
         <h3 style="color: var(--text-main); margin-bottom: 6px;">No workflows found matching "${currentSearch}"</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Try searching for ERP, nodes, mobile, LangGraph, or Docker.</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Try searching for Make, Zapier, HubSpot, ERP, nodes, or LangGraph.</p>
       </div>
     `;
     return;
@@ -229,7 +231,7 @@ function renderProjects() {
       </div>
       <div class="card-footer">
         <span class="card-link" onclick="openProjectModal('${p.id}')">
-          View Architecture <i class="fa-solid fa-arrow-right"></i>
+          View Details <i class="fa-solid fa-arrow-right"></i>
         </span>
       </div>
     </div>
@@ -240,8 +242,9 @@ function renderProjects() {
 function filterProjects(category) {
   currentFilter = category;
   document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-  if (event && event.target) {
-    event.target.classList.add('active');
+  if (typeof event !== 'undefined' && event && event.target) {
+    const targetBtn = event.target.closest('.tab-btn') || event.target;
+    targetBtn.classList.add('active');
   }
   renderProjects();
 }
