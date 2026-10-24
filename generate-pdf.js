@@ -157,7 +157,7 @@ function generateTwoPageCV(outputPath) {
   // 1. Professional Summary
   drawSectionHeader(doc, 'Professional Summary', x, contentWidth, 9, 5);
   doc.fillColor(COLORS.body).fontSize(9.1).font('Helvetica').text(
-    'Accomplished Computer Engineer and AI Automation Specialist combining deep expertise in full-stack website design and development with robust systems integration. Experienced in designing visually compelling, mobile-first websites and web portals utilizing modern AI design workflows (Google Antigravity, Claude Code, rapid UI prototyping) to accelerate delivery. Proven portfolio of live deployed web projects on Render spanning healthcare clinics (Smile Inn), sovereign institutional portals (FOE Procurement Portal), AI task assistants, and interactive event experiences. Co-built 30+ native integration nodes and automated 30+ production pipelines connecting CRMs (HubSpot, GoHighLevel, Airtable), forms (Typeform, Tally, Fillout), messaging platforms (WhatsApp Cloud API/WAPA, Instagram, Telegram), and databases. Comfortable working under strict NDA and proprietary data standards.',
+    'Accomplished Computer Engineer and AI Automation Specialist combining deep expertise in full-stack website design and development with robust systems integration. Experienced in designing visually compelling, mobile-first websites and web portals utilizing modern AI design workflows (Google Antigravity, Claude Code, rapid UI prototyping) to accelerate delivery. Proven portfolio of live concept web design mockups and interactive prototypes deployed on Render (including dental clinic mockups like Smile Inn, sovereign institutional portal concepts like FOE Procurement Portal, task assistant apps, and personal portfolio). Co-built 30+ native integration nodes and automated 30+ production pipelines connecting CRMs (HubSpot, GoHighLevel, Airtable), forms (Typeform, Tally, Fillout), messaging platforms (WhatsApp Cloud API/WAPA, Instagram, Telegram), and databases. Comfortable working under strict NDA and proprietary data standards.',
     x, doc.y,
     { width: contentWidth, lineGap: 2.8 }
   );
@@ -212,12 +212,12 @@ function generateTwoPageCV(outputPath) {
   // 4. Featured Projects (The Mix: Web Design on Render + Systems Automation)
   drawSectionHeader(doc, 'Key Technical Architecture Projects', x, contentWidth, 9, 6);
   const projects = [
-    { title: 'Smile Inn Dental Clinic Website (Live on Render):', desc: 'Designed a modern, responsive clinic website featuring calming color psychology, interactive before/after treatment sliders, doctor profiles, and appointment booking funnels.' },
-    { title: 'FOE Sovereign Procurement Directorate Portal (Live on Render):', desc: 'Official digital web portal for the Future of Egypt Directorate with sovereign branding, responsive data tables, multi-role navigation, and bilingual Arabic/English layout.' },
+    { title: 'Smile Inn Dental Clinic Website (Live Concept Mockup — Render):', desc: 'Designed a modern, responsive clinic website concept mockup featuring calming color psychology, interactive before/after treatment sliders, doctor profiles, and appointment booking funnels.' },
+    { title: 'FOE Sovereign Procurement Directorate Portal (Concept Prototype — Render):', desc: 'Conceptual digital web portal and dashboard mockup designed for sovereign procurement operations with executive branding, responsive data tables, multi-role navigation, and bilingual Arabic/English layout.' },
     { title: 'Omnichannel Social & Messaging Automation:', desc: 'Multi-platform social funnels connecting WhatsApp Cloud API / WAPA, Instagram DM comment-to-lead triggers, Facebook Messenger support bots, and Telegram channels with HubSpot & GoHighLevel.' },
     { title: 'Advanced Forms & Lead Capture Pipelines:', desc: 'Multi-step conditional form routing across Typeform, Tally, Fillout, and Jotform with automated data enrichment, calendar booking, and instant Slack/WhatsApp sales alerts.' },
     { title: 'AI MicroMind App & Report Bot Framework:', desc: 'Conversational BI reporting engine translating natural language prompts into live SQL/OData queries across Oracle, SAP, Dynamics 365, Odoo, and SQL databases.' },
-    { title: 'Smart Task Assistant & Merna Invitation Web Apps (Live on Render):', desc: 'AI-powered task management app with sleek dark-mode glassmorphism alongside a bespoke mobile-first animated digital invitation web experience.' }
+    { title: 'Smart Task Assistant & Merna Invitation Web Apps (Live Prototypes — Render):', desc: 'AI-powered task management app prototype with sleek dark-mode glassmorphism alongside a bespoke mobile-first animated digital invitation web mockup.' }
   ];
   projects.forEach(p => drawBulletItem(doc, p.title, p.desc, x, contentWidth, { fontSize: 8.8, lineGap: 2.4, itemGap: 4.5 }));
 
@@ -293,7 +293,7 @@ function generateOnePageResume(outputPath) {
   // 1. Summary
   drawSectionHeader(doc, 'Professional Summary', x, contentWidth, 7, 4);
   doc.fillColor(COLORS.body).fontSize(8.6).font('Helvetica').text(
-    'Accomplished Computer Engineer and AI Automation Specialist combining hands-on expertise in full-stack website design and development with advanced systems integration. Experienced in designing visually compelling, mobile-first websites and web portals utilizing modern AI design workflows (Google Antigravity, Claude Code, rapid UI prototyping) alongside production business automations (Make, Zapier, n8n, CRMs, WhatsApp/Social funnels). Proven portfolio of live deployed web projects on Render (Smile Inn, FOE Procurement Portal, task assistant apps, and personal portfolio). Comfortable working under strict NDA.',
+    'Accomplished Computer Engineer and AI Automation Specialist combining hands-on expertise in full-stack website design and development with advanced systems integration. Experienced in designing visually compelling, mobile-first websites and web portals utilizing modern AI design workflows (Google Antigravity, Claude Code, rapid UI prototyping) alongside production business automations (Make, Zapier, n8n, CRMs, WhatsApp/Social funnels). Proven portfolio of live concept web design mockups and interactive prototypes deployed on Render (Smile Inn, FOE Procurement Portal, task assistant apps, and personal portfolio). Comfortable working under strict NDA.',
     x, doc.y,
     { width: contentWidth, lineGap: 2.2 }
   );
@@ -312,8 +312,8 @@ function generateOnePageResume(outputPath) {
   // 3. Featured Render Projects & Workflows
   drawSectionHeader(doc, 'Key Technical Architecture Projects', x, contentWidth, 8, 4);
   const projects = [
-    { title: 'Smile Inn Clinic Website (Live on Render):', desc: 'Designed modern dental clinic website with calming aesthetics, before/after interactive sliders, doctor profiles, and booking funnels.' },
-    { title: 'FOE Sovereign Procurement Directorate Portal (Live on Render):', desc: 'Official portal for Future of Egypt Directorate with sovereign branding, responsive tables, and bilingual Arabic/English layout.' },
+    { title: 'Smile Inn Clinic Website (Live Concept Mockup — Render):', desc: 'Designed modern dental clinic concept mockup with calming aesthetics, before/after interactive sliders, doctor profiles, and booking funnels.' },
+    { title: 'FOE Sovereign Procurement Portal (Concept Prototype — Render):', desc: 'Conceptual portal mockup for Future of Egypt Directorate with sovereign branding, responsive tables, and bilingual Arabic/English layout.' },
     { title: 'Omnichannel Social & Messaging Automation:', desc: 'Lead funnels across WhatsApp (WAPA), Instagram DMs, Messenger, and Telegram synced to HubSpot & GoHighLevel.' },
     { title: 'Advanced Forms & Lead Capture Pipelines:', desc: 'Multi-step conditional forms (Typeform, Tally, Fillout) with instant validation, CRM enrichment, and Slack alerts.' },
     { title: 'AI MicroMind App & Report Bot Framework:', desc: 'Conversational BI reporting engine translating natural language prompts into live SQL/OData queries across ERPs and SQL databases.' }
