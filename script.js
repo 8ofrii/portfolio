@@ -6,20 +6,20 @@
 // Rich Enterprise Projects Data Matrix (8 Deep Showcase Architectures)
 const projectsData = [
   {
-    id: "micromind-app-rebort",
-    title: "AI MicroMind App & Rebort Bot Framework",
+    id: "micromind-app-report",
+    title: "AI MicroMind App & Report Bot Framework",
     subtitle: "Conversational Natural Language BI & ERP Analytics Engine",
     category: "arch",
     categoryLabel: "Architecture & System Design",
     icon: "fa-solid fa-chart-line",
-    desc: "Engineered the Rebort Bot Framework enabling enterprise users to query live operational data across on-premise ERPs (Oracle, Microsoft Dynamics, SAP, Odoo, SQL) and cloud platforms (Oracle Fusion, Dynamics 365 OData) via natural language.",
-    techStack: ["AI MicroMind App", "Rebort Bot BI", "Oracle ERP", "Dynamics 365", "SAP", "Odoo", "SQL Server", "Oracle Fusion"],
+    desc: "Engineered the Report Bot Framework enabling enterprise users to query live operational data across on-premise ERPs (Oracle, Microsoft Dynamics, SAP, Odoo, SQL) and cloud platforms (Oracle Fusion, Dynamics 365 OData) via natural language.",
+    techStack: ["AI MicroMind App", "Report Bot BI", "Oracle ERP", "Dynamics 365", "SAP", "Odoo", "SQL Server", "Oracle Fusion"],
     details: {
       overview: "An enterprise-grade Conversational Business Intelligence engine bridging natural language user intent with complex ERP relational schemas and OData API endpoints.",
       architecture: [
         "Natural Language Semantic Parser with automated SQL / OData schema introspection.",
         "Universal Database Adapter supporting Oracle, Microsoft Dynamics, SAP, Odoo, PostgreSQL, and SQL Server.",
-        "Rebort Bot BI Visualizer generating interactive charts, KPI cards, and automated PDF executive reports.",
+        "Report Bot BI Visualizer generating interactive charts, KPI cards, and automated PDF executive reports.",
         "Enterprise RBAC (Role-Based Access Control) ensuring row-level and column-level security compliance."
       ],
       impact: "Reduced ad-hoc enterprise report turnaround times from 4 hours to under 3 seconds with 99.4% query accuracy."
@@ -305,7 +305,7 @@ function openResumeModal() {
     <div class="resume-rendered">
       <h1>MAHMOUD ABD EL-GHAFFAR (Mahmoud Zanaty)</h1>
       <p style="color: var(--primary-cyan); font-weight: 700; margin-bottom: 10px; font-size: 1.05rem;">
-        AI Automation & Integration Architect | Multi-Agent Systems, Enterprise ERP BI & Core Engineering
+        AI Automation Engineer & Systems Integration Specialist | Make, Zapier, n8n, APIs & Multi-Agent Workflows
       </p>
       <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 14px;">
         <span>📍 Benha / Cairo, Egypt</span>
@@ -318,37 +318,38 @@ function openResumeModal() {
       </div>
 
       <h2>Professional Summary</h2>
-      <p>Accomplished Computer Engineer and AI Agent Architect with extensive expertise designing, scaling, and deploying autonomous AI agent networks, enterprise Pinecone RAG pipelines, and multi-platform automation ecosystems. Built and co-built 30+ native integration nodes in AI MicroMind Core and engineered 30+ production AI workflows connecting enterprise ERPs (Oracle, Microsoft Dynamics, SAP, Odoo, Oracle Fusion, Dynamics 365 OData, SQL) with advanced LLMs (GPT-4o, Claude 3.5 Sonnet, Gemini 2.0 Flash). Architect of the AI MicroMind App & Rebort Bot Conversational BI Framework, full-stack mobile applications, MicroMind MicroApps middleware, and custom integrations across 12+ enterprise platforms (Lark Suite, Bubble.io, Teamwork, ConnectWise, Zoom, Slack, WAPA). Proficient in Docker, AWS, Linux VPS, Render, and GitHub CI/CD.</p>
+      <p>Accomplished <strong>Computer Engineer</strong> and <strong>AI Automation Specialist</strong> with hands-on expertise building end-to-end automated workflows, multi-agent systems, and production integrations across <strong>Zapier, Make, n8n</strong>, and custom APIs. Built and co-built <strong>30+ native integration nodes in AI MicroMind Core</strong> and engineered <strong>30+ production workflows</strong> connecting CRMs (<strong>HubSpot, Airtable</strong>), web forms, messaging platforms (<strong>Slack, Gmail, WhatsApp/WAPA</strong>), and enterprise databases. Recognized for strong <strong>systems thinking, proactive error handling</strong>, and the ability to articulate complex technical workflows into clear, actionable terms for non-technical business clients. Comfortable working under strict <strong>NDA and proprietary data privacy standards</strong>.</p>
 
       <h2>Core Technical Competencies</h2>
       <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 18px;">
-        <li><strong style="color: var(--text-main);">Agent & Workflow Frameworks:</strong> MicroMind Platform (30+ Native Core Nodes), n8n, LangChain (Expert), LangGraph (Advanced), MCP, Webhooks, Schedulers</li>
-        <li><strong style="color: var(--text-main);">Enterprise ERPs & Database BI:</strong> Conversational BI over Oracle ERP, Oracle Fusion, Dynamics 365 OData, SAP, Odoo, PostgreSQL, SQL Server, LLM-to-SQL</li>
-        <li><strong style="color: var(--text-main);">Vector Databases & RAG:</strong> Pinecone Vector DB (Hybrid Dense+Sparse Search), OpenAI Embeddings, PGVector, Contextual Chunking & Retrieval</li>
-        <li><strong style="color: var(--text-main);">Custom App Dev & Integrations:</strong> Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, WAPA</li>
-        <li><strong style="color: var(--text-main);">Mobile & Full-Stack Engineering:</strong> Full-Stack Mobile Applications, AI MicroMind MicroApps Middleware, Node.js, Python, REST APIs, WebSockets</li>
-        <li><strong style="color: var(--text-main);">DevOps, Cloud & AI Acceleration:</strong> Docker, AWS, DigitalOcean Linux VPS, Render, GitHub CI/CD, Google Antigravity, Claude Code, Codex</li>
+        <li><strong style="color: var(--text-main);">Automation Platforms & Orchestration:</strong> Make (Integromat), Zapier, n8n, AI MicroMind (30+ Native Core Nodes), Webhooks, Cron Schedulers, REST APIs, OAuth2</li>
+        <li><strong style="color: var(--text-main);">Business & CRM Integrations:</strong> HubSpot, Airtable, Gmail, Microsoft 365, Slack, Meta/WhatsApp (WAPA), Telegram, ClickUp, Teamwork, ConnectWise, Typeform/Jotform</li>
+        <li><strong style="color: var(--text-main);">AI & Multi-Agent Frameworks:</strong> LangChain (Expert), LangGraph (Advanced), Model Context Protocol (MCP), Pinecone Vector DB, OpenAI Embeddings, LLM-to-SQL</li>
+        <li><strong style="color: var(--text-main);">Systems Reliability & Delivery:</strong> Systems Architecture, Automated Error Handling & Retries, Real-Time Alerting, SOPs & Plain-Language Client Documentation</li>
+        <li><strong style="color: var(--text-main);">Enterprise ERPs & Database BI:</strong> Conversational BI over Oracle ERP, Oracle Fusion, Dynamics 365 OData, SAP, Odoo, PostgreSQL, SQL Server</li>
+        <li><strong style="color: var(--text-main);">Backend, Cloud & Acceleration:</strong> Node.js / TypeScript, Python, Docker, AWS, DigitalOcean Linux VPS, Render, GitHub CI/CD, Google Antigravity, Claude Code</li>
       </ul>
 
       <h2>Professional Experience</h2>
       <h3 style="color: var(--text-main);">AI & Automation Engineer — AI MicroMind <span style="font-size: 0.85rem; color: var(--primary-cyan); font-weight: normal;">(2024 – 2026)</span></h3>
       <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
-        <li>Built and co-built 30+ native integration nodes directly inside AI MicroMind Core (Node.js runtime) for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI coding tools (Antigravity, Claude Code, Codex).</li>
-        <li>Architected the AI MicroMind App featuring the Rebort Bot Framework and Advanced BI & Reporting Tools, enabling non-technical users to query on-premise ERPs (Oracle, SAP, Microsoft Dynamics, Odoo, SQL) and cloud platforms (Oracle Fusion, Dynamics 365 OData) via natural language.</li>
-        <li>Engineered full-stack mobile applications (frontend & backend) and constructed AI MicroMind MicroApps, establishing plug-and-play middleware to integrate third-party applications into the MicroMind ecosystem.</li>
-        <li>Developed custom integration applications and automated event pipelines across Lark Suite, Bubble.io, Teamwork, Teamwork Desk, ConnectWise, ClickUp, Zoom, Slack, Discord, Telegram, Facebook Messenger, and WAPA.</li>
-        <li>Constructed multi-agent graph workflows using LangChain (Expert) and LangGraph (Advanced), implementing Model Context Protocol (MCP) server dispatchers for safe backend script execution via Claude and GPT prompts.</li>
-        <li>Managed containerization, deployment, server monitoring, and continuous integration across AWS, Docker, DigitalOcean Linux VPS, Render, and GitHub Actions.</li>
+        <li>Built and co-built <strong>30+ native integration nodes directly inside AI MicroMind Core</strong> (Node.js runtime) for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI coding tools (<strong>Antigravity, Claude Code, Codex</strong>).</li>
+        <li>Designed multi-step business automations across <strong>Zapier, Make, and n8n</strong> connecting CRMs (HubSpot, Airtable), web forms, and messaging tools, eliminating manual data entry and accelerating client operational pipelines.</li>
+        <li>Architected the <strong>AI MicroMind App</strong> featuring the <strong>Report Bot Framework</strong> and <strong>Advanced BI & Reporting Tools</strong>, enabling non-technical users to query on-premise ERPs (<strong>Oracle, SAP, Microsoft Dynamics, Odoo, SQL</strong>) and cloud platforms via natural language.</li>
+        <li>Implemented robust error-handling, fallback triggers, and webhook retry mechanisms, ensuring zero data loss and 99.9% uptime across production integrations.</li>
+        <li>Developed client-facing documentation, visual workflow diagrams, and SOPs, translating intricate technical pipelines into plain-language guides for non-technical stakeholders.</li>
+        <li>Constructed multi-agent graph workflows using <strong>LangChain (Expert)</strong> and <strong>LangGraph (Advanced)</strong>, implementing Model Context Protocol (MCP) server dispatchers for secure backend script execution via Claude and GPT prompts.</li>
+        <li>Managed containerization, deployment, server monitoring, and continuous integration across <strong>AWS, Docker, DigitalOcean Linux VPS, Render, and GitHub Actions</strong>.</li>
       </ul>
 
       <h3 style="color: var(--text-main); margin-top: 18px;">Automation Engineer — Operatives (IT Services) <span style="font-size: 0.85rem; color: var(--primary-cyan); font-weight: normal;">(Jun 2021 – Jan 2022)</span></h3>
       <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
-        <li>Analyzed cross-departmental business workflows and engineered automated data synchronization pipelines, eliminating manual operational bottlenecks and accelerating cross-functional service delivery.</li>
+        <li>Analyzed cross-departmental business workflows and engineered automated data synchronization pipelines, eliminating repetitive manual bottlenecks and reducing data-entry errors by over 70%.</li>
       </ul>
 
       <h3 style="color: var(--text-main); margin-top: 18px;">Operation Engineer & Admin — Operatives (IT Services) <span style="font-size: 0.85rem; color: var(--primary-cyan); font-weight: normal;">(Jan 2020 – Jun 2021)</span></h3>
       <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
-        <li>Administered IT infrastructure operations, monitored workflow execution logs, enforced strict SLA compliance, and resolved technical service tickets.</li>
+        <li>Administered IT infrastructure operations, monitored workflow execution logs, enforced strict SLA compliance, and resolved technical service tickets with prompt escalation.</li>
       </ul>
     </div>
   `;

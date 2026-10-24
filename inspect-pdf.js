@@ -13,12 +13,13 @@ console.log(extractedChars.slice(0, 500));
 // Test finding keywords in the assembled character stream
 const keywords = [
   'MAHMOUD',
-  'AI Agent Architect',
-  'MicroMind',
+  'AI Automation Specialist',
+  'Make',
+  'Zapier',
+  'n8n',
   'LangChain',
   'LangGraph',
-  'n8n',
-  'Rebort Bot',
+  'Report Bot',
   'Pinecone',
   'Oracle',
   'Dynamics',
