@@ -126,6 +126,46 @@ const projectsData = [
     }
   },
   {
+    id: "omnichannel-social-automation",
+    title: "Omnichannel Social & Messaging Automation",
+    subtitle: "WhatsApp, Instagram, Messenger & Telegram Lead Funnels",
+    category: "social",
+    categoryLabel: "Social & Messaging",
+    icon: "fa-brands fa-whatsapp",
+    desc: "Engineered multi-channel social media automations connecting Meta WhatsApp Cloud API / WAPA, Instagram DM comment-to-lead funnels, Facebook Messenger support bots, and Telegram channels with bidirectional CRM synchronization.",
+    techStack: ["WhatsApp (WAPA)", "Instagram Graph API", "Messenger Bot", "Telegram Bot API", "Make", "Zapier", "GoHighLevel (GHL)", "HubSpot"],
+    details: {
+      overview: "An integrated omnichannel conversational system capturing leads directly from social interactions, qualifying prospects via automated dialogs, and booking sales appointments 24/7.",
+      architecture: [
+        "Instagram & Facebook Graph API webhooks capturing post comments, reel interactions, and story mentions with instant automated DM response triggers.",
+        "Meta WhatsApp Cloud API / WAPA dialog flows qualifying buyer intent, capturing contact details, and confirming bookings.",
+        "Telegram Bot API integration automating community notifications, VIP client alerts, and internal lead escalation.",
+        "Instant bidirectional syncing with HubSpot and GoHighLevel (GHL) pipelines, tagging contacts and assigning sales reps."
+      ],
+      impact: "Boosted client social lead capture rates by 65% and cut inquiry response times from 3 hours to under 4 seconds."
+    }
+  },
+  {
+    id: "forms-lead-capture-pipeline",
+    title: "Advanced Forms & Lead Capture Pipelines",
+    subtitle: "Typeform, Tally, Fillout & Jotform to CRM Sync",
+    category: "forms",
+    categoryLabel: "Forms & Lead Generation",
+    icon: "fa-solid fa-rectangle-list",
+    desc: "Engineered high-converting multi-step lead capture pipelines utilizing Typeform, Tally, Fillout, and Jotform with dynamic conditional logic, automated data validation, CRM enrichment, and instant team notifications.",
+    techStack: ["Typeform", "Tally", "Fillout", "Jotform", "Google Forms", "HubSpot CRM", "GoHighLevel (GHL)", "Slack API"],
+    details: {
+      overview: "Smart, self-validating lead capture infrastructure that routes submissions through validation rules, enriches lead data, and updates client databases in real time.",
+      architecture: [
+        "Multi-step conditional form branching tailored to lead size, budget, and urgency across Typeform, Tally, and Fillout.",
+        "Webhook payload verification and deduplication before ingestion into HubSpot CRM, Airtable, and GoHighLevel.",
+        "Automated calendar booking integration (Calendly / SavvyCal) triggered dynamically upon high-intent form completion.",
+        "Instant Slack, WhatsApp, and email alerts sent to sales teams with enriched prospect profiles."
+      ],
+      impact: "Processed 10,000+ form submissions with 100% data fidelity, zero lost leads, and instantaneous CRM routing."
+    }
+  },
+  {
     id: "mcp-server-infrastructure",
     title: "Model Context Protocol (MCP) Server Infrastructure",
     subtitle: "Standardized Tooling & Execution Environment",
@@ -199,10 +239,13 @@ function renderProjects() {
   const filtered = projectsData.filter(p => {
     const matchesCategory = currentFilter === 'all' || 
       p.category === currentFilter ||
-      (currentFilter === 'integrations' && (p.category === 'integrations' || p.id === 'micromind-core-nodes'));
+      (currentFilter === 'integrations' && (p.category === 'integrations' || p.category === 'social' || p.category === 'forms' || p.id === 'micromind-core-nodes')) ||
+      (currentFilter === 'forms' && (p.category === 'forms' || p.id === 'business-automation-pipelines')) ||
+      (currentFilter === 'social' && (p.category === 'social' || p.id === 'microapps-ecosystem' || p.id === 'micromind-core-nodes'));
     const matchesSearch = !currentSearch || 
       p.title.toLowerCase().includes(currentSearch) ||
       p.desc.toLowerCase().includes(currentSearch) ||
+      p.categoryLabel.toLowerCase().includes(currentSearch) ||
       p.techStack.some(t => t.toLowerCase().includes(currentSearch));
     return matchesCategory && matchesSearch;
   });

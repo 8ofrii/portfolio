@@ -81,16 +81,17 @@
         <span class="gradient-text">AI Automation & Systems Integration</span>
       </h1>
       <p class="hero-subtitle reveal">
-        Computer Engineer specializing in <strong>Automated Business Workflows (Make, Zapier, n8n)</strong>, <strong>Multi-Agent Systems (LangGraph & LangChain)</strong>, and <strong>Enterprise API Integrations</strong>. Developer of reliable production workflows, custom native nodes, and self-healing business pipelines.
+        Computer Engineer specializing in <strong>Automated Business Workflows (Make, Zapier, n8n)</strong>, <strong>Social & Messaging Systems (WhatsApp, Instagram, Telegram, Messenger)</strong>, <strong>Forms & Lead Capture</strong>, and <strong>Multi-Agent Architecture</strong>. Building reliable production workflows, custom native nodes, and self-healing client pipelines.
       </p>
       
       <div class="hero-tags reveal">
         <span class="tag"><i class="fa-solid fa-bolt"></i> Make, Zapier & n8n Workflows</span>
-        <span class="tag"><i class="fa-solid fa-diagram-project"></i> MicroMind Platform & Native Core Nodes</span>
+        <span class="tag"><i class="fa-brands fa-whatsapp"></i> WhatsApp, Instagram & Telegram Automation</span>
+        <span class="tag"><i class="fa-solid fa-rectangle-list"></i> Forms (Typeform, Tally, Fillout, Jotform)</span>
+        <span class="tag"><i class="fa-solid fa-users"></i> CRMs (HubSpot, GoHighLevel, Airtable)</span>
         <span class="tag"><i class="fa-solid fa-chart-pie"></i> Report Bot BI (ERP / SQL / OData)</span>
-        <span class="tag"><i class="fa-solid fa-database"></i> Pinecone RAG & PostgreSQL</span>
-        <span class="tag"><i class="fa-solid fa-mobile-screen"></i> Mobile Apps & MicroMind MicroApps</span>
-        <span class="tag"><i class="fa-solid fa-network-wired"></i> LangChain (Expert) & LangGraph (Advanced)</span>
+        <span class="tag"><i class="fa-solid fa-plug"></i> MicroMind Platform & 30+ Core Nodes</span>
+        <span class="tag"><i class="fa-solid fa-network-wired"></i> LangChain & LangGraph Multi-Agents</span>
       </div>
 
       <div class="hero-cta-group reveal">
@@ -149,11 +150,11 @@
         <div class="arch-flow-grid">
           <!-- Tier 1 -->
           <div class="arch-tier">
-            <span class="tier-badge">TIER 1 — CLIENT, CRMS & FORMS LAYER</span>
-            <h3 class="tier-title">Business Apps, CRMs & Forms</h3>
-            <p class="tier-desc">Automated webhook ingestion from forms (Typeform/Jotform), bidirectional CRM pipelines (HubSpot/Airtable), and cross-platform messaging.</p>
+            <span class="tier-badge">TIER 1 — CLIENT, CRMS, SOCIAL & FORMS</span>
+            <h3 class="tier-title">Social Messaging, CRMs & Lead Forms</h3>
+            <p class="tier-desc">Automated webhook ingestion from forms (Typeform, Tally, Fillout, Jotform), social media funnels (WhatsApp, Instagram, Messenger, Telegram), and CRM pipelines (HubSpot, GoHighLevel, Airtable).</p>
             <div class="tier-chips">
-              <span>Make & Zapier</span> <span>HubSpot</span> <span>Airtable</span> <span>Typeform / Jotform</span> <span>Slack & Gmail</span> <span>WAPA</span> <span>ClickUp</span>
+              <span>Make & Zapier</span> <span>WhatsApp / WAPA</span> <span>Instagram DM</span> <span>Telegram</span> <span>Facebook Messenger</span> <span>HubSpot</span> <span>GoHighLevel (GHL)</span> <span>Airtable</span> <span>Typeform & Tally</span> <span>Fillout & Jotform</span> <span>Slack & Gmail</span> <span>Stripe</span>
             </div>
           </div>
 
@@ -198,7 +199,9 @@
         </div>
 
         <div class="filter-tabs">
-          <button class="tab-btn active" onclick="filterProjects('all')">All Workflows (8)</button>
+          <button class="tab-btn active" onclick="filterProjects('all')">All Workflows (10)</button>
+          <button class="tab-btn" onclick="filterProjects('forms')"><i class="fa-solid fa-rectangle-list"></i> Forms & Leads</button>
+          <button class="tab-btn" onclick="filterProjects('social')"><i class="fa-brands fa-whatsapp"></i> Social & WhatsApp</button>
           <button class="tab-btn" onclick="filterProjects('integrations')"><i class="fa-solid fa-plug"></i> Integrations</button>
           <button class="tab-btn" onclick="filterProjects('arch')">Systems & Automations</button>
           <button class="tab-btn" onclick="filterProjects('nodes-mcp')">Custom Nodes & MCP</button>
@@ -314,15 +317,29 @@
 
         <div class="skill-category reveal">
           <div class="cat-header">
-            <i class="fa-solid fa-laptop-code cat-icon"></i>
-            <h3>CRM, Marketing & App Integrations</h3>
+            <i class="fa-brands fa-whatsapp cat-icon" style="color: #25d366;"></i>
+            <h3>Social & Messaging Automation</h3>
           </div>
           <div class="skill-list">
-            <div class="skill-item"><span>HubSpot & Airtable Workflows</span> <span class="level">Expert</span></div>
-            <div class="skill-item"><span>Typeform, Jotform & Webhooks</span> <span class="level">Expert</span></div>
-            <div class="skill-item"><span>WAPA (WhatsApp), Slack & Gmail</span> <span class="level">Expert</span></div>
-            <div class="skill-item"><span>ClickUp, Teamwork & ConnectWise</span> <span class="level">Advanced</span></div>
-            <div class="skill-item"><span>Lark Suite & Bubble.io</span> <span class="level">Advanced</span></div>
+            <div class="skill-item"><span>WhatsApp Cloud API & WAPA</span> <span class="level">Expert</span></div>
+            <div class="skill-item"><span>Instagram DM & Comment Funnels</span> <span class="level">Expert</span></div>
+            <div class="skill-item"><span>Facebook Messenger Bots</span> <span class="level">Expert</span></div>
+            <div class="skill-item"><span>Telegram Bot API & Channels</span> <span class="level">Expert</span></div>
+            <div class="skill-item"><span>Slack & Gmail Integrations</span> <span class="level">Expert</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="cat-header">
+            <i class="fa-solid fa-rectangle-list cat-icon"></i>
+            <h3>Forms, CRMs & Lead Pipelines</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item"><span>Typeform, Tally, Fillout & Jotform</span> <span class="level">Expert</span></div>
+            <div class="skill-item"><span>HubSpot & GoHighLevel (GHL)</span> <span class="level">Expert</span></div>
+            <div class="skill-item"><span>Airtable Relational Databases</span> <span class="level">Expert</span></div>
+            <div class="skill-item"><span>Stripe Webhooks & Billing</span> <span class="level">Advanced</span></div>
+            <div class="skill-item"><span>Voice AI Agents (Vapi & OpenAI)</span> <span class="level">Advanced</span></div>
           </div>
         </div>
 
