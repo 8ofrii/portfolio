@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahmoud Abd El-Ghaffar - Resume</title>
+  <title>Mahmoud Abd El-Ghaffar - Resume & CV</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -15,10 +15,10 @@
       padding: 0;
     }
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      color: #0f172a;
-      background-color: #f1f5f9;
-      padding: 36px 20px;
+      font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #222222;
+      background-color: #f4f4f5;
+      padding: 30px 20px;
       line-height: 1.5;
     }
     .print-bar {
@@ -27,111 +27,91 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #0f172a;
+      background: #111111;
       color: #fff;
-      padding: 14px 24px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      padding: 12px 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.12);
     }
-    .print-btn {
-      background: #0284c7;
-      color: #fff;
-      border: none;
-      padding: 10px 22px;
-      border-radius: 6px;
+    .print-btn-group {
+      display: flex;
+      gap: 12px;
+    }
+    .action-btn {
+      background: #ffffff;
+      color: #111111;
+      border: 1px solid #ffffff;
+      padding: 8px 16px;
+      border-radius: 5px;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 13px;
       cursor: pointer;
-      transition: background 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
     }
-    .print-btn:hover {
-      background: #0369a1;
+    .action-btn:hover {
+      background: #e4e4e7;
     }
     .page-container {
       max-width: 860px;
       margin: 0 auto;
       background: #ffffff;
-      padding: 44px 52px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.07);
-      border-radius: 10px;
+      padding: 48px 52px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+      border-radius: 6px;
     }
     .header {
-      border-bottom: 2.5px solid #0284c7;
-      padding-bottom: 16px;
       margin-bottom: 22px;
     }
     .header h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 27px;
+      font-size: 28px;
       font-weight: 800;
-      color: #0f172a;
-      letter-spacing: -0.5px;
-      margin-bottom: 4px;
+      color: #111111;
+      letter-spacing: -0.3px;
+      margin-bottom: 3px;
     }
     .header .title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #0284c7;
+      font-size: 15px;
+      font-weight: 600;
+      color: #222222;
       margin-bottom: 10px;
-      letter-spacing: 0.2px;
     }
     .header .contact-info {
-      font-size: 13px;
-      color: #475569;
+      font-size: 13.5px;
+      color: #222222;
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
-      font-weight: 500;
-      margin-bottom: 6px;
-    }
-    .header .contact-links {
-      font-size: 13px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
+      gap: 20px;
+      align-items: center;
     }
     .header a {
-      color: #0284c7;
+      color: #111111;
       text-decoration: none;
-      font-weight: 600;
     }
     .header a:hover {
       text-decoration: underline;
     }
     h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 14.5px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: #0f172a;
-      border-bottom: 1.5px solid #e2e8f0;
+      font-size: 15px;
+      font-weight: 700;
+      color: #111111;
+      border-bottom: 1.2px solid #111111;
       padding-bottom: 4px;
-      margin: 20px 0 10px;
+      margin: 22px 0 10px;
+      letter-spacing: -0.1px;
     }
     p {
-      font-size: 12.8px;
-      color: #334155;
+      font-size: 13.5px;
+      color: #222222;
       margin-bottom: 10px;
       line-height: 1.6;
       text-align: justify;
     }
-    .skills-list {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 14px;
-    }
-    .skill-row {
-      font-size: 12.5px;
-      color: #334155;
-      line-height: 1.5;
-    }
-    .skill-row strong {
-      color: #0f172a;
-    }
     .exp-item {
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
     .exp-header {
       display: flex;
@@ -140,36 +120,63 @@
       margin-bottom: 4px;
     }
     .exp-role {
-      font-size: 14.5px;
-      font-weight: 800;
-      color: #0f172a;
-    }
-    .exp-company {
-      font-size: 13.5px;
+      font-size: 14px;
       font-weight: 700;
-      color: #0284c7;
+      color: #111111;
     }
     .exp-date {
-      font-size: 12px;
-      font-weight: 700;
-      color: #64748b;
-      background: #f1f5f9;
-      padding: 2px 8px;
-      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #444444;
     }
     ul {
-      padding-left: 18px;
-      margin-top: 5px;
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 4px;
     }
     li {
-      font-size: 12.5px;
-      color: #334155;
+      font-size: 13.5px;
+      color: #222222;
       margin-bottom: 5px;
       line-height: 1.55;
       text-align: justify;
     }
     li strong {
-      color: #0f172a;
+      color: #111111;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 28px;
+      margin-bottom: 14px;
+    }
+    .skill-block {
+      margin-bottom: 4px;
+    }
+    .skill-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 2px;
+    }
+    .skill-desc {
+      font-size: 13px;
+      color: #222222;
+      line-height: 1.5;
+    }
+    .project-item {
+      margin-bottom: 12px;
+    }
+    .project-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 2px;
+    }
+    .project-desc {
+      font-size: 13px;
+      color: #222222;
+      line-height: 1.55;
     }
 
     @media print {
@@ -197,98 +204,136 @@
 <body>
 
   <div class="print-bar">
-    <span><strong>Mahmoud Abd El-Ghaffar — Curriculum Vitae</strong></span>
-    <button class="print-btn" onclick="window.print()">📥 Save / Download PDF</button>
+    <span><strong>Mahmoud Abd El-Ghaffar — FlowCV Executive Resume & CV</strong></span>
+    <div class="print-btn-group">
+      <a class="action-btn" href="Mahmoud_Abd_El-Ghaffar_Resume.pdf" download>📄 1-Page Resume (PDF)</a>
+      <a class="action-btn" href="Mahmoud_Abd_El-Ghaffar_CV.pdf" download>📑 2-Page CV (PDF)</a>
+    </div>
   </div>
 
   <div class="page-container">
     <div class="header">
-      <h1>MAHMOUD ABD EL-GHAFFAR (Mahmoud Zanaty)</h1>
-      <div class="title">Computer Engineer | AI Automation & Web Development Specialist | Website Design, Make, Zapier & Render</div>
+      <h1>Mahmoud Abd El-Ghaffar</h1>
+      <div class="title">AI Automation & Web Development Engineer</div>
       <div class="contact-info">
-        <span>📍 Benha / Cairo, Egypt</span>
+        <span>✉️ <a href="mailto:mahmoudzanaty454@gmail.com">mahmoudzanaty454@gmail.com</a></span>
         <span>📞 <a href="tel:+201024190741">+20 102 419 0741</a></span>
-        <span>✉️ mahmoudzanaty454@gmail.com</span>
-      </div>
-      <div class="contact-links">
-        <span>🔗 LinkedIn: <a href="https://www.linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219/" target="_blank">linkedin.com/in/mahmoud-abd-el-gaffar-4aa378219</a></span>
-        <span>🌐 Portfolio: <a href="https://portfolio-mrt6.onrender.com/" target="_blank">https://portfolio-mrt6.onrender.com/</a></span>
+        <span>📍 Benha / Cairo, Egypt</span>
+        <span>🌐 <a href="https://portfolio-mrt6.onrender.com/" target="_blank">portfolio-mrt6.onrender.com</a></span>
       </div>
     </div>
 
     <h2>Professional Summary</h2>
     <p>
-      Accomplished <strong>Computer Engineer</strong> combining hands-on expertise in <strong>full-stack website design and development</strong> with advanced <strong>AI automation and systems integration</strong>. Experienced in designing visually compelling, mobile-first websites and web portals utilizing modern AI design workflows (<strong>Google Antigravity, Claude Code, rapid UI prototyping</strong>) alongside production business automations (<strong>Make, Zapier, n8n, CRMs, WhatsApp/Social funnels</strong>). Proven portfolio of live concept web design mockups and interactive prototypes deployed on Render (including dental clinic mockups like <strong>Smile Inn</strong>, sovereign institutional portal concepts like <strong>FOE Procurement Portal</strong>, interactive web apps, and personal portfolio). Proven track record engineering <strong>30+ native integration nodes in AI MicroMind Core</strong> and automating <strong>30+ production workflows</strong> connecting CRMs (<strong>HubSpot, GoHighLevel, Airtable</strong>), forms, messaging platforms (<strong>WhatsApp Cloud API/WAPA, Instagram, Telegram, Slack</strong>), and databases. Comfortable working under strict <strong>NDA and proprietary data privacy standards</strong>.
+      Computer Engineer and AI Automation Specialist combining hands-on expertise in full-stack website design and development with advanced systems integration. Experienced in designing visually compelling, mobile-first websites and web portals utilizing modern AI design workflows (Google Antigravity, Claude Code, rapid UI prototyping) alongside production business automations (Make, Zapier, n8n, CRMs, WhatsApp/Social funnels). Proven portfolio of live concept web design mockups and interactive prototypes deployed on Render (dental clinic mockups like Smile Inn, sovereign institutional portal concepts like FOE Procurement Portal, task assistant apps, and personal portfolio). Proven track record engineering 30+ native integration nodes in AI MicroMind Core and automating 30+ production workflows connecting CRMs (HubSpot, GoHighLevel, Airtable), forms (Typeform, Tally, Fillout), messaging platforms (WhatsApp Cloud API/WAPA, Instagram, Telegram, Slack), and databases. Comfortable working under strict NDA and proprietary data privacy standards.
     </p>
 
-    <h2>Core Technical & Design Competencies</h2>
-    <div class="skills-list">
-      <div class="skill-row">• <strong>Website Design & Front-End UI/UX:</strong> Responsive Web Design (Mobile/Tablet/Desktop), UI/UX Layouts, Visual Hierarchy, Modern CSS3 (Grid, Flexbox, Animations), HTML5, JavaScript (ES6+), React / Vite, Glassmorphism.</div>
-      <div class="skill-row">• <strong>AI-Powered Design & Engineering Workflows:</strong> Google Antigravity, Claude Code, AI wireframing, prompt-to-UI component generation, rapid design iteration, asset optimization.</div>
-      <div class="skill-row">• <strong>Automation Platforms & Orchestration:</strong> Make (Integromat), Zapier, n8n, AI MicroMind (30+ Native Core Nodes), Webhooks, Cron Schedulers, REST APIs, OAuth2.</div>
-      <div class="skill-row">• <strong>Social & Messaging Systems:</strong> Meta WhatsApp Cloud API / WAPA, Instagram DM & Comment Funnels, Facebook Messenger Bots, Telegram Bot API, Slack, Gmail.</div>
-      <div class="skill-row">• <strong>Forms, CRMs & Cloud Infrastructure:</strong> Typeform, Tally, Fillout, Jotform, HubSpot CRM, GoHighLevel (GHL), Airtable, Render Web Services & Hosting, Docker, AWS, GitHub CI/CD.</div>
-      <div class="skill-row">• <strong>Systems Reliability & Delivery:</strong> Systems Architecture, Automated Error Handling & Retries, Real-Time Alerting, SOPs & Plain-Language Client Documentation.</div>
-    </div>
-
     <h2>Professional Experience</h2>
-
     <div class="exp-item">
       <div class="exp-header">
-        <div>
-          <span class="exp-role">AI, Web & Automation Engineer</span> — <span class="exp-company">AI MicroMind</span>
-        </div>
-        <span class="exp-date">2024 – Present</span>
+        <span class="exp-role">AI & Automation Engineer, AI MicroMind</span>
+        <span class="exp-date">2024 – 2026</span>
       </div>
       <ul>
-        <li>Designed and built responsive web applications, micro-apps, and custom UI components utilizing modern AI developer tools (<strong>Google Antigravity, Claude Code</strong>), accelerating prototyping, styling, and live deployment.</li>
-        <li>Built and co-built <strong>30+ native integration nodes directly inside AI MicroMind Core</strong> (Node.js runtime) for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL Audit Loggers using AI coding tools.</li>
-        <li>Designed multi-step business automations across <strong>Zapier, Make, and n8n</strong> connecting social channels (WhatsApp, Instagram DMs, Telegram), forms (Typeform, Tally, Fillout), and CRMs (HubSpot, GoHighLevel, Airtable), eliminating manual data entry and accelerating client pipelines.</li>
-        <li>Architected the <strong>AI MicroMind App</strong> featuring the <strong>Report Bot Framework</strong> and <strong>Advanced BI & Reporting Tools</strong>, enabling non-technical users to query on-premise ERPs (<strong>Oracle, SAP, Microsoft Dynamics, Odoo, SQL</strong>) and cloud platforms via natural language.</li>
-        <li>Implemented robust error-handling, fallback triggers, and webhook retry mechanisms, ensuring zero data loss and 99.9% uptime across production integrations.</li>
-        <li>Developed client-facing documentation, visual workflow diagrams, and SOPs, translating intricate technical pipelines into plain-language guides for non-technical stakeholders.</li>
-        <li>Managed containerization, deployment, server monitoring, and continuous integration across <strong>AWS, Docker, DigitalOcean Linux VPS, Render, and GitHub Actions</strong>.</li>
+        <li>Built and co-built 30+ native integration nodes for WAPA (WhatsApp API), Telegram, Gmail, Weather, MCP Client, Pinecone, Webhooks, Schedulers, and PostgreSQL audit logging.</li>
+        <li>Architected and deployed the AI MicroMind App with conversational BI and reporting capabilities, enabling natural-language access to operational data across Oracle, Microsoft Dynamics, SAP, Odoo, SQL, Oracle Fusion, and Dynamics 365 OData.</li>
+        <li>Engineered responsive web applications and interactive client portals leveraging modern AI design workflows (Google Antigravity, Claude Code) for rapid UI iteration, clean UX, and component modularity.</li>
+        <li>Developed AI agents and multi-step automation workflows using LangChain and LangGraph, including MCP-based integrations and backend execution flows.</li>
+        <li>Built modular MicroApps and custom integrations connecting third-party business applications to the MicroMind ecosystem.</li>
+        <li>Worked across deployment and infrastructure using Docker, AWS, DigitalOcean, Linux VPS, Render, and GitHub version-control workflows.</li>
       </ul>
     </div>
 
     <div class="exp-item">
       <div class="exp-header">
-        <div>
-          <span class="exp-role">Front-End & Automation Engineer</span> — <span class="exp-company">Operatives (IT Services)</span>
-        </div>
-        <span class="exp-date">Jun 2021 – Jan 2022</span>
+        <span class="exp-role">Automation Engineer, Operatives (IT Services)</span>
+        <span class="exp-date">06/2021 – 01/2022</span>
       </div>
-      <ul>
-        <li>Developed internal web portal interfaces, automated dashboards, and data synchronization pipelines, eliminating repetitive manual bottlenecks and reducing data-entry errors by over 70%.</li>
-        <li>Maintained multi-system integrations across internal service catalogs, ticketing systems, and database stores with automated error logging and alerting.</li>
-      </ul>
+      <p>
+        Analyzed cross-department operational processes and built end-to-end automations to reduce repetitive manual work and data-entry bottlenecks.
+      </p>
     </div>
 
     <div class="exp-item">
       <div class="exp-header">
-        <div>
-          <span class="exp-role">Operation Engineer & Admin</span> — <span class="exp-company">Operatives (IT Services)</span>
-        </div>
-        <span class="exp-date">Jan 2020 – Jun 2021</span>
+        <span class="exp-role">Operation Engineer & Admin, Operatives (IT Services)</span>
+        <span class="exp-date">01/2020 – 06/2021</span>
       </div>
-      <ul>
-        <li>Administered IT infrastructure operations, monitored workflow execution logs, enforced strict SLA compliance, and resolved technical service tickets with prompt escalation.</li>
-      </ul>
+      <p>
+        Managed IT operations, monitored workflow execution, supported operational tracking systems, and followed SLA-related processes.
+      </p>
     </div>
-
-    <h2>Featured Projects: Web Design on Render & Systems Automation</h2>
-    <ul>
-      <li>• <strong>Smile Inn Dental Clinic Website (Live Concept Mockup — Render):</strong> Designed a modern, responsive clinic website concept mockup featuring calming color psychology, interactive before/after treatment sliders, doctor profiles, and appointment booking funnels.</li>
-      <li>• <strong>FOE Sovereign Procurement Directorate Portal (Concept Prototype — Render):</strong> Conceptual digital web portal and dashboard mockup designed for sovereign procurement operations with executive branding, responsive data tables, multi-role navigation, and bilingual Arabic/English layout.</li>
-      <li>• <strong>Omnichannel Social & Messaging Automation:</strong> Multi-platform social funnels connecting WhatsApp Cloud API / WAPA, Instagram DM comment-to-lead triggers, Facebook Messenger support bots, and Telegram channels with HubSpot & GoHighLevel.</li>
-      <li>• <strong>Advanced Forms & Lead Capture Pipelines:</strong> Multi-step conditional form routing across Typeform, Tally, Fillout, and Jotform with automated data enrichment, calendar booking, and instant Slack/WhatsApp sales alerts.</li>
-      <li>• <strong>AI MicroMind App & Report Bot Framework:</strong> Conversational BI reporting engine translating natural language prompts into live SQL/OData queries across Oracle, SAP, Dynamics 365, Odoo, and SQL databases.</li>
-      <li>• <strong>Smart Task Assistant & Merna Invitation Web Apps (Live Prototypes — Render):</strong> AI-powered task management app prototype with sleek dark-mode glassmorphism alongside a bespoke mobile-first animated digital invitation web mockup.</li>
-    </ul>
 
     <h2>Education</h2>
-    <p><strong>B.Sc. in Computer Engineering</strong> — Faculty of Engineering Shoubra, Benha University (Benha, Egypt)</p>
-    <p style="font-size: 12px; color: #64748b;">Specialization: Computer Systems Architecture, Database Management Systems, Software Engineering, Web Technologies & AI Systems.</p>
+    <div class="exp-item">
+      <div class="exp-role">B.Sc. in Computer Engineering, Faculty of Engineering Shoubra, Benha University</div>
+      <p style="margin-top: 3px; font-size: 13px;">
+        Specialization: Computer Systems Architecture, Database Management Systems, Software Engineering & AI Systems.
+      </p>
+    </div>
+
+    <h2>Core Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <div class="skill-title">Automation & AI Platforms</div>
+        <div class="skill-desc">AI MicroMind, Flowise, n8n, Make, Zapier, LangChain, LangGraph</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Integration & Orchestration</div>
+        <div class="skill-desc">MCP Client, REST APIs, Webhooks, Schedulers, OAuth2, Third-Party APIs</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Website Design & UI/UX (AI-Assisted)</div>
+        <div class="skill-desc">Responsive Web Design, Google Antigravity, Claude Code, Rapid UI Prototyping, Glassmorphism, Cross-Browser UI</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Business & CRM Integrations</div>
+        <div class="skill-desc">HubSpot CRM, GoHighLevel (GHL), Airtable, Microsoft 365, Slack, Lark Suite, Teamwork, ConnectWise</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">AI, RAG & Data Engineering</div>
+        <div class="skill-desc">AI Agents, Multi-Agent Workflows, Pinecone, PostgreSQL, PGVector, OpenAI Embeddings, LLM-to-SQL</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Social & Messaging Platforms</div>
+        <div class="skill-desc">WhatsApp Cloud API / WAPA, Instagram DM Automations, Facebook Messenger, Telegram Bot API</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Deployment & Cloud Infrastructure</div>
+        <div class="skill-desc">Node.js / TypeScript, Docker, AWS, DigitalOcean, Linux VPS, Render Web Hosting, GitHub CI/CD</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Forms & Lead Capture Pipelines</div>
+        <div class="skill-desc">Typeform, Tally, Fillout, Jotform, Google Forms, Lead Validation & Multi-Step Conditional Routing</div>
+      </div>
+    </div>
+
+    <h2>Selected Project Highlights</h2>
+    <div class="project-item">
+      <div class="project-title">AI MicroMind App & Reporting Bot Framework</div>
+      <div class="project-desc">Conversational BI reporting engine translating natural language prompts into live SQL/OData queries across Oracle, SAP, Dynamics 365, Odoo, and SQL databases.</div>
+    </div>
+    <div class="project-item">
+      <div class="project-title">30+ Native Integration Nodes (AI MicroMind Core)</div>
+      <div class="project-desc">Reusable native integration nodes for WAPA (WhatsApp API), Telegram, Gmail, MCP Client, Pinecone, webhooks, schedulers, and PostgreSQL audit logging.</div>
+    </div>
+    <div class="project-item">
+      <div class="project-title">Smile Inn Dental Clinic Website (Live Concept Mockup — Render)</div>
+      <div class="project-desc">Designed a modern, responsive clinic website concept mockup featuring calming color psychology, interactive before/after treatment sliders, doctor profiles, and appointment booking funnels.</div>
+    </div>
+    <div class="project-item">
+      <div class="project-title">FOE Sovereign Procurement Directorate Portal (Concept Prototype — Render)</div>
+      <div class="project-desc">Conceptual digital web portal and dashboard mockup designed for sovereign procurement operations with executive branding, responsive data tables, multi-role navigation, and bilingual Arabic/English layout.</div>
+    </div>
+    <div class="project-item">
+      <div class="project-title">Omnichannel Social & Messaging Automation Systems</div>
+      <div class="project-desc">Multi-platform social funnels connecting WhatsApp Cloud API / WAPA, Instagram DM comment-to-lead triggers, Facebook Messenger support bots, and Telegram channels with HubSpot & GoHighLevel.</div>
+    </div>
+    <div class="project-item">
+      <div class="project-title">Smart Task Assistant & Merna Invitation Web Apps (Live Prototypes — Render)</div>
+      <div class="project-desc">AI-powered task management app prototype with sleek dark-mode glassmorphism alongside a bespoke mobile-first animated digital invitation web mockup.</div>
+    </div>
+
   </div>
 
 </body>
